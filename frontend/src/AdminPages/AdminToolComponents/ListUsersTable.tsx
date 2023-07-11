@@ -33,18 +33,6 @@ function ListUsersTable() {
         fetchData();
         console.log(users);
     }, []);
-      
-      const rows = [
-        createData('Ceren', 'Akyar', 'crn@gmail.com', '01.05.2002', 'Female'),
-        createData( 'Selin', 'Çabuk', '', '12.05.2002', 'Female'),
-        createData( 'Selin', 'bilmiyom', '', '12.05.2002', 'Female'),
-        createData( 'Selin', 'bilmiyom', '', '12.05.2002', 'Female'),
-        createData( 'Selin', 'bilmiyom', '', '12.05.2002', 'Female'),
-        createData( 'Selin', 'bilmiyom', '', '12.05.2002', 'Female'),
-        createData( 'Selin', 'bilmiyom', '', '12.05.2002', 'Female'),
-        createData( 'Selin', 'bilmiyom', '', '12.05.2002', 'Female'),
-        createData( 'Selin', 'bilmiyom', '', '12.05.2002', 'Female'),
-      ];
 
     return (
         <TableContainer component={Paper}>
@@ -60,7 +48,7 @@ function ListUsersTable() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row) => (
+                    {users && users.length > 0 && users.map((row) => (
                         <TableRow
                             key={row.email}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
