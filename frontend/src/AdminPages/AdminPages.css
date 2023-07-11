@@ -1,0 +1,7 @@
+.tableDiv {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 2%;
+    max-height: 80vh;
+    overflow: auto;
+}

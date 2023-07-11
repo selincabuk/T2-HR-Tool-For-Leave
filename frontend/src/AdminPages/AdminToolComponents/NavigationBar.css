@@ -1,0 +1,42 @@
+.navbarLinks {
+    text-decoration: none;
+    margin-right: 2vw;
+    font-size: 1vw;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.2s;
+    color: #c4c0c0;
+}
+
+.active {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 2vw;
+    font-size: 1vw;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.2s;
+}
+
+.pending {
+    text-decoration: none;
+    margin-right: 2vw;
+    font-size: 1vw;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.2s;
+    color: #c4c0c0;
+}
+
+.logoutBtn {
+    display: -webkit-box;
+    margin-left: auto;
+}
+
+.fullWidthNav {
+    width: 100%;
+    align-items: left;
+    background-color: #1a1a1a;
+    height: 6vh;
+    padding: 0 2vw;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
