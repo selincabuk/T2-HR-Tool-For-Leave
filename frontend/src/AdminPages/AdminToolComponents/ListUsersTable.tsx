@@ -11,13 +11,19 @@ import { useState, useEffect } from 'react';
 
 function ListUsersTable() {
 
-    function createData(fname:string, lname:string, email:string, birthDate:string, gender:string) {
-        return { fname, lname, email, birthDate, gender };
-      }
 
-      const [users,setUsers] = useState([]);
 
-      useEffect(() => {
+    type User = {
+        fname: string,
+        lname: string,
+        email: string,
+        birthDate: string,
+        gender: string
+    }
+
+    const [users, setUsers] = useState([] as User[]);
+
+    useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await fetch('http://localhost:3001/admin/users');

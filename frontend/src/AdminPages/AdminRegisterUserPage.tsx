@@ -1,10 +1,11 @@
 import NavigationBar from "./AdminToolComponents/NavigationBar";
+import RegisterationForm from "./AdminToolComponents/RegisterationForm";
 
 function AdminRegisterUserPage() {
     return (
       <div>
           <NavigationBar />
-          Burada user register edilecek
+          <RegisterationForm />
       </div>
     );
   }

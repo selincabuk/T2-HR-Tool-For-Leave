@@ -1,3 +1,45 @@
 .actionBtn {
     cursor: pointer;
 }
+
+.form__holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 8vh;
+}
+
+.form__input {
+    margin: 10px;
+    border-radius: 1vw;
+    padding: 20px 30px;
+    transition: 0.2s;
+    box-shadow: inset 0 0 2px black;
+    min-width: 260px;
+    width: 20%;
+}
+
+.form__input:focus {
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.button__submit {
+    background-color: #888dae;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 2vh;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.select__input {
+    transition: 0.2s;
+    box-shadow: inset 0 0 2px black;
+    border-radius: 1vw;
+}
