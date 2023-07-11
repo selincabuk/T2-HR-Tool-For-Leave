@@ -7,12 +7,32 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import EditActionButton from './EditActionButton';
 import DeleteIconButton from './DeleteIconButton';
+import { useState, useEffect } from 'react';
 
 function ListUsersTable() {
 
-    function createData(fname, lname, email, birthDate, gender) {
+    function createData(fname:string, lname:string, email:string, birthDate:string, gender:string) {
         return { fname, lname, email, birthDate, gender };
       }
+
+      const [users,setUsers] = useState([]);
+
+      useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost:3001/admin/users');
+                if (!response.ok) {
+                    console.log("hataaaaaa")
+                }
+                const data = await response.json();
+                setUsers(data);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+        fetchData();
+        console.log(users);
+    }, []);
       
       const rows = [
         createData('Ceren', 'Akyar', 'crn@gmail.com', '01.05.2002', 'Female'),

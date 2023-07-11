@@ -1,0 +1,90 @@
+{
+  "uuid": "6f4e27b3-248f-4225-b4b1-0934fe2c668f",
+  "lastMigration": 27,
+  "name": "Mock API",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "eabf4580-2d3b-43e8-a275-f89d17a3ccc0",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/users",
+      "responses": [
+        {
+          "uuid": "61da4402-3d07-4efe-948a-2bdc64350f6b",
+          "body": "[\n  {\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"cerenakyar@gmail.com\",\n    \"birthDate\": \"01/05/2002\",\n    \"gender\": \"Female\",\n    \"pwd\": 12345\n  },\n  {\n    \"id\": 1,\n    \"fname\": \"Selin\",\n    \"lname\": \"Çabuk\",\n    \"email\": \"sln@gmail.com\",\n    \"birthDate\": \"12/05/2002\",\n    \"gender\": \"Female\",\n    \"pwd\": 12345\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "eabf4580-2d3b-43e8-a275-f89d17a3ccc0"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
