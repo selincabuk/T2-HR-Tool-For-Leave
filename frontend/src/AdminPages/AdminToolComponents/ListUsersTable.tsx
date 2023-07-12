@@ -9,6 +9,7 @@ import EditActionButton from './EditActionButton';
 import DeleteIconButton from './DeleteIconButton';
 import Alert from '@mui/material/Alert';
 import { useState, useEffect } from 'react';
+import './Components.css';
 
 function ListUsersTable() {
 
@@ -55,8 +56,8 @@ function ListUsersTable() {
                 <Table sx={{ minWidth: 650 }} aria-label="users table">
                     <TableHead>
                         <TableRow>
-                            <TableCell>First Name</TableCell>
-                            <TableCell>Last Name</TableCell>
+                            <TableCell className='tr' align="center">First Name</TableCell>
+                            <TableCell align="center">Last Name</TableCell>
                             <TableCell align="center">Email</TableCell>
                             <TableCell align="center">Date of Birth</TableCell>
                             <TableCell align="center">Gender</TableCell>
@@ -69,10 +70,10 @@ function ListUsersTable() {
                                 key={row.email}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
-                                <TableCell component="th" scope="row">
+                                <TableCell align="center" component="th" scope="row">
                                     {row.fname}
                                 </TableCell>
-                                <TableCell component="th" scope="row">
+                                <TableCell align="center" component="th" scope="row">
                                     {row.lname}
                                 </TableCell>
                                 <TableCell align="center">{row.email}</TableCell>
