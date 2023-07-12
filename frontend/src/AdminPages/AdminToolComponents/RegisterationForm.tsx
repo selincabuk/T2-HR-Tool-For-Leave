@@ -44,34 +44,35 @@ function RegisterationForm() {
         <div>
             <form className="form__holder">
 
-                <input type="text" name="fname" placeholder="Enter first name" required className="form__input"
-                    id="fname" onChange={(e) => inputChangeHandler(e)} />
+                <input style= {{ border: "2px solid #b3cae7"}} type="text" name="fname" placeholder="Enter first name" required className="form__input"
+                     id="fname" onChange={(e) => inputChangeHandler(e)} />
 
-                <input type="text" name="lname" placeholder="Enter last name" required className="form__input"
+                <input style= {{ border: "2px solid #b3cae7"}} type="text" name="lname" placeholder="Enter last name" required className="form__input"
                     id="lname" onChange={(e) => inputChangeHandler(e)} />
 
-                <input type="text" name="email" placeholder="Enter email" required className="form__input"
+                <input style= {{ border: "2px solid #b3cae7"}} type="text" name="email" placeholder="Enter email" required className="form__input"
                     id="email" onChange={(e) => inputChangeHandler(e)} />
 
-                <input type="password" name="password" placeholder="Enter password" required className="form__input"
+                <input style= {{ border: "2px solid #b3cae7"}} type="password" name="password" placeholder="Enter password" required className="form__input"
                     id="pwd" onChange={(e) => inputChangeHandler(e)} />
 
-                <input type="password" name="password" placeholder="Enter password again" required className="form__input"
+                <input style= {{ border: "2px solid #b3cae7"}} type="password" name="password" placeholder="Enter password again" required className="form__input"
                     id="pwdAgain" onChange={(e) => inputChangeHandler(e)} />
                 <Box sx={{ minWidth: 120 }}>
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Gender</InputLabel>
-                        <Select className="select__input"
+                        <Select className="select__input" 
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             value={gender}
                             label="Gender"
                             onChange={handleGenderSelectChange}
+                            style={{backgroundColor: "#f0f9ff" }}
                         >
-                            <MenuItem value={"female"}>Female</MenuItem>
-                            <MenuItem value={"male"}>Male</MenuItem>
-                            <MenuItem value={"noresponse"}>I prefer not so say</MenuItem>
-                            <MenuItem value={"other"}>Other</MenuItem>
+                            <MenuItem value={"female"} style={{border: "1px solid #b3cae7" }}>Female</MenuItem>
+                            <MenuItem value={"male"} style={{border: "1px solid #b3cae7"}}>Male</MenuItem>
+                            <MenuItem value={"noresponse"} style={{border: "1px solid #b3cae7"}}>I prefer not to say</MenuItem>
+                            <MenuItem value={"other"} style={{border: "1px solid #b3cae7"}}>Other</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>

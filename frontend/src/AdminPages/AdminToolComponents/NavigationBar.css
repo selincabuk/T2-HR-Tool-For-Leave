@@ -8,13 +8,15 @@
 }
 
 .active {
-    color: #ffffff;
+    color: #39382b;
     text-decoration: none;
     margin-right: 2vw;
     font-size: 2.1vh;
     font-family: 'Roboto', sans-serif;
     transition: 0.2s;
+    background-color: #8ca2c2;
 }
+
 
 .pending {
     text-decoration: none;
@@ -23,6 +25,7 @@
     font-family: 'Roboto', sans-serif;
     transition: 0.2s;
     color: #e7dfdf;
+    background-color: aquamarine;
 }
 
 .logoutBtn {
@@ -39,4 +42,8 @@
     position: fixed;
     top: 0;
     z-index: 1;
+}
+
+.active:hover {
+   
 }
