@@ -8,12 +8,9 @@ import Paper from '@mui/material/Paper';
 import EditActionButton from './EditActionButton';
 import DeleteIconButton from './DeleteIconButton';
 import Alert from '@mui/material/Alert';
-import { CircularProgress } from '@mui/material';
 import { useState, useEffect } from 'react';
-import Loading from './Loading';
 
 function ListUsersTable() {
-
 
     type User = {
         fname: string,
@@ -22,7 +19,7 @@ function ListUsersTable() {
         birthDate: string,
         gender: string
     }
-
+    // state to fetch users:
     const [users, setUsers] = useState([] as User[]);
 
     // state if fetching fails:
