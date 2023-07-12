@@ -63,17 +63,17 @@ function Login() {
     {/* form gönderildiğinde çalışır */}
 
       <form onSubmit={handleSubmit}>
-        <div className="input-container">
+        <div className="input-container" style={{color: "white" }}>  
           <label>Email </label>
           <input type="text" name="emaill" placeholder="Enter email" required />
           {renderErrorMessage("emaill")} {/* email hatalıysa */}
         </div>
-        <div className="input-container">
+        <div className="input-container" style={{color: "white"}}>
           <label>Password </label>
           <input type="password" name="pass" placeholder="Enter password" required />
           {renderErrorMessage("pass")}
         </div>
-        <div className="input-container">
+        <div className="input-container" style={{color: "white"}}>
           <label>
             <input
               type="checkbox"
@@ -93,7 +93,7 @@ function Login() {
   return (
     <div className="app">
       <div className="login-form">
-        <div className="title">Login</div>
+        <div className="title" style={{color: "white", textAlign:"center"}} >Login</div>
         {isSubmitted ? (
           <div>Admin is successfully logged in</div>
         ) : (

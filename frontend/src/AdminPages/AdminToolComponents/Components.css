@@ -71,12 +71,13 @@
   .button__submit:hover span {
     padding-right: 25px;
     background-color: #b3cae7;
-   
+    width: 180px;
   }
   
   .button__submit:hover span:after {
     opacity: 1;
     right: 0;
+    
   }
 
   .spinnerHolder {
