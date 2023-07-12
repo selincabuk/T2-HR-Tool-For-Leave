@@ -93,7 +93,7 @@ function Login() {
   return (
     <div className="app">
       <div className="login-form">
-        <div className="title">Login Page</div>
+        <div className="title">Login</div>
         {isSubmitted ? (
           <div>Admin is successfully logged in</div>
         ) : (
