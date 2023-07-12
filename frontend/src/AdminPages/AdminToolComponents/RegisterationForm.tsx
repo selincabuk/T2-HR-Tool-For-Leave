@@ -79,7 +79,7 @@ function RegisterationForm() {
                 <input type="date" name="bd" placeholder="Enter Birthday" required className="form__input"
                     id="bd" onChange={(e) => inputChangeHandler(e)} />
 
-                <button type="submit" className="button__submit">Register</button>
+                <button type="submit" className="button__submit"><span>Register </span>  </button>
             </form>
         </div >
     );

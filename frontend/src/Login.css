@@ -8,6 +8,8 @@
   height: 100vh;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   background-color: #f8f9fd;
+  margin: 0;
+  padding: 0;
 }
 
 input[type="text"],
@@ -20,14 +22,16 @@ input[type="submit"] {
   margin-top: 10px;
   cursor: pointer;
   font-size: 15px;
-  background: rgb(231, 6, 231);
-  border: 4px solid powderblue;
+  background: #8ca2c2;
+  border: 4px solid #b3cae7;
   color: #fff;
   padding: 10px 20px;
+  content: "Submit";
+  
 }
 
 input[type="submit"]:hover {
-  background: #89CFF0;
+  background: #b3cae7;
 }
 
 .button-container {
@@ -36,7 +40,7 @@ input[type="submit"]:hover {
 }
 
 .login-form {
-  background-color: #89CFF0;
+  background-color: #b3cae7;
   padding: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

@@ -17,7 +17,29 @@
       "responses": [
         {
           "uuid": "61da4402-3d07-4efe-948a-2bdc64350f6b",
-          "body": "[\n  {\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"cerenakyar@gmail.com\",\n    \"birthDate\": \"01/05/2002\",\n    \"gender\": \"Female\",\n    \"pwd\": 12345\n  },\n  {\n    \"id\": 1,\n    \"fname\": \"Selin\",\n    \"lname\": \"Çabuk\",\n    \"email\": \"sln@gmail.com\",\n    \"birthDate\": \"12/05/2002\",\n    \"gender\": \"Female\",\n    \"pwd\": 12345\n  }\n]",
+          "body": "module.exports = function (req, res) {\r\n  res.send({\r\n    \"results\": [\r\n      {\r\n        \"gender\": \"female\",\r\n        \"name\": {\r\n          \"title\": \"Miss\",\r\n          \"first\": \"Jennie\",\r\n          \"last\": \"Nichols\"\r\n        },\r\n        // Diğer alanlar\r\n      }\r\n    ],\r\n    \"info\": {\r\n      \"seed\": \"56d27f4a53bd5441\",\r\n      \"results\": 1,\r\n      \"page\": 1,\r\n      \"version\": \"1.4\"\r\n    }\r\n  });\r\n};\r\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "14472ed8-e5a6-4cc0-9b93-1e3fc28ba91e",
+          "body": "{}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -30,7 +52,7 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": false
         }
       ],
       "enabled": true,
