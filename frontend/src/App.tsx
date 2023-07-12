@@ -22,6 +22,7 @@ function App() {
               <Route path="user/view-off" element={<ViewDaysOff />} />
               <Route path="user/add-off-days" element={<AddDayOff />} />
               <Route path="user/view-profile" element={<ViewProfile />} />
+              <Route path="user/edit-profile" element={<ViewProfile />} />
             </Routes>
     </BrowserRouter>
   );
