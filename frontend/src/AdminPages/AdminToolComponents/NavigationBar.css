@@ -1,17 +1,17 @@
 .navbarLinks {
     text-decoration: none;
     margin-right: 2vw;
-    font-size: 1vw;
+    font-size: 2vh;
     font-family: 'Roboto', sans-serif;
     transition: 0.2s;
-    color: #c4c0c0;
+    color: #f9f4f4;
 }
 
 .active {
     color: #ffffff;
     text-decoration: none;
     margin-right: 2vw;
-    font-size: 1vw;
+    font-size: 2.1vh;
     font-family: 'Roboto', sans-serif;
     transition: 0.2s;
 }
@@ -19,10 +19,10 @@
 .pending {
     text-decoration: none;
     margin-right: 2vw;
-    font-size: 1vw;
+    font-size: 2vh;
     font-family: 'Roboto', sans-serif;
     transition: 0.2s;
-    color: #c4c0c0;
+    color: #e7dfdf;
 }
 
 .logoutBtn {
@@ -33,8 +33,8 @@
 .fullWidthNav {
     width: 100%;
     align-items: left;
-    background-color: #1a1a1a;
-    height: 6vh;
+    background-color: var(--colorPrimaryActive);
+    height: 7vh;
     padding: 0 2vw;
     position: fixed;
     top: 0;

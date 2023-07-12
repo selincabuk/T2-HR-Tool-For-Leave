@@ -8,9 +8,7 @@ function AdminListUsersPage() {
         <div className="tableDiv">
           <ListUsersTable />
         </div>
-        
       </div>
-          
     );
   }
   

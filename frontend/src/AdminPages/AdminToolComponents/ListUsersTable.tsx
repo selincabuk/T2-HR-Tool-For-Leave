@@ -32,12 +32,12 @@ function ListUsersTable() {
                 }
                 const data = await response.json();
                 setUsers(data);
+                console.log(data);
             } catch (error) {
                 console.error('Error:', error);
             }
         };
         fetchData();
-        console.log(users);
     }, []);
 
     return (
@@ -54,7 +54,7 @@ function ListUsersTable() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {users && users.length > 0 && users.map((row) => (
+                    {users && users.length > 0 && users.map((row: User) => (
                         <TableRow
                             key={row.email}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

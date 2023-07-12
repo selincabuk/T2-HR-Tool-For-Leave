@@ -6,7 +6,7 @@ import './NavigationBar.css';
 
 function NavigationBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
+    <Navbar collapseOnSelect expand="lg" className="fullWidthNav" data-bs-theme="dark">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
