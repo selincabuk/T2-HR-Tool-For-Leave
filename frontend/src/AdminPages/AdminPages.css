@@ -5,3 +5,9 @@
     max-height: 80vh;
     overflow: auto;
 }
+
+.calendar__holder {
+    width: 80%;
+    margin: auto;
+    margin-top: 4vh;
+}

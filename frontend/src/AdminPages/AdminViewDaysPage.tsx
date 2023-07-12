@@ -1,10 +1,14 @@
+import CalendarForLeave from "./AdminToolComponents/CalendarForLeave";
 import NavigationBar from "./AdminToolComponents/NavigationBar";
 
 function AdminViewDaysPage() {
   return (
     <div>
       <NavigationBar />
-        Burada günler gözükecek
+      <div className="calendar__holder">
+        <CalendarForLeave />
+      </div>
+
     </div>
   );
 }
