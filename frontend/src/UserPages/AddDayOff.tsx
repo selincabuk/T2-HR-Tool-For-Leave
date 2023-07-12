@@ -1,9 +1,16 @@
-function AddDayOff() {
-    return(
-        <div>
-            day off gözükecek
-        </div>
-    );
-}
+import NavigationBarUser from "./UserToolComponents/NavigationBarUser";
+import "./UserPages.css";
 
-export default AddDayOff;
+function UserAddDayOffPage() {
+    return (
+      <div>
+        <NavigationBarUser />
+        <div>
+          
+        </div>
+      </div>
+    );
+  }
+  
+  export default UserAddDayOffPage;
+  
