@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import "../UserPages.css";
 
-export default function SelectAutoWidth() {
+export default function SelectExcuseLeave() {
     const [excuseLeave, setexcuseLeave] = React.useState('');
   
     const handleChange = (event: SelectChangeEvent) => {
@@ -13,14 +13,15 @@ export default function SelectAutoWidth() {
     };
 
     return(<div className="select__center">
-    <FormControl sx={{ m: 1, minWidth: 150 }}>
+    <FormControl className='formControl' sx={{ m: 1, minWidth: 150 , maxWidth:200}}>
       <InputLabel
         id="demo-simple-select-autowidth-label"
         className="select__input"
       >
         Excuse Leave
       </InputLabel>
-      <Select
+      <Select 
+
         labelId="demo-simple-select-autowidth-label"
         id="demo-simple-select-autowidth"
         value={excuseLeave}

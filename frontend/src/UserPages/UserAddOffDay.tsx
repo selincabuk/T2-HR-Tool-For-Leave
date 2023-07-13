@@ -5,13 +5,13 @@ import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import NavigationBarUser from "./UserToolComponents/NavigationBarUser";
 import "./UserPages.css";
-import SelectAutoWidth from './UserToolComponents/ExcuseLeaveSelect';
+import SelectExcuseLeave from './UserToolComponents/ExcuseLeaveSelect';
 
 function UserAddOffDay() {
   return (
-    <div className="select__container">
+    <div className="select__container" style={{margin:"center"}}>
       <NavigationBarUser />
-      <SelectAutoWidth />
+      <SelectExcuseLeave />
      
     </div>
   );
