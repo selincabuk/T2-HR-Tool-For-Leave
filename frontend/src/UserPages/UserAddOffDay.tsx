@@ -6,12 +6,17 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import NavigationBarUser from "./UserToolComponents/NavigationBarUser";
 import "./UserPages.css";
 import SelectExcuseLeave from './UserToolComponents/ExcuseLeaveSelect';
+import DatePickerValue from './UserToolComponents/StartDatePicker';
+
+
 
 function UserAddOffDay() {
   return (
-    <div className="select__container" style={{margin:"center"}}>
+    <div className="select__container" >
       <NavigationBarUser />
       <SelectExcuseLeave />
+      <DatePickerValue />
+     
      
     </div>
   );

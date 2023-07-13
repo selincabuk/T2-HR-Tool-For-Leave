@@ -17,6 +17,7 @@ export default function SelectExcuseLeave() {
       <InputLabel
         id="demo-simple-select-autowidth-label"
         className="select__input"
+        
       >
         Excuse Leave
       </InputLabel>

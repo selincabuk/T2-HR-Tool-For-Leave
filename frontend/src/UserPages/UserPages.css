@@ -31,11 +31,10 @@
   
   .select__container {
     justify-content: center;
-    
-    margin-top: 8vh;
     width: auto;
-  margin: 50px auto 0;
-  text-align: center
+    text-align: center;
+    
+    
     
 }
 .form__input {
@@ -53,7 +52,9 @@
  .select {
     width: 500px;
   margin: 50px auto 0;
-  text-align: center
+  text-align: center;
+  
+
  }
   
 
@@ -70,6 +71,7 @@
    
  }
 
+<<<<<<< Updated upstream
  
 
  .ant-tabs-tab.ant-tabs-tab .ant-tabs-tab-btn {
@@ -86,3 +88,7 @@
   margin: auto;
   margin-top: 4vh;
 }
+=======
+
+ 
+>>>>>>> Stashed changes
