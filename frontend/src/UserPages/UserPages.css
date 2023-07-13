@@ -20,3 +20,44 @@
     border-radius: 6px;
     height: 80vh;
 }
+
+.select__input {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: justify;
+    
+  }
+  
+  .select__container {
+    justify-content: center;
+    margin: auto;
+    margin-top: 8vh;
+    
+}
+.form__input {
+    margin: 10px;
+    border-radius: 1vw;
+    padding: 20px 30px;
+    transition: 0.2s;
+    box-shadow: #b3cae7;
+    min-width: 260px;
+    width: 20%;
+    border: 2px solid #b3cae7;
+    
+
+}
+
+.select__input {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: justify;
+    
+  }
+  
+  .select__container {
+    justify-content: center;
+    margin: auto;
+  }
+  
