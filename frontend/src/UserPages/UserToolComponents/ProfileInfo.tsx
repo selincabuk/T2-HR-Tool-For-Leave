@@ -1,3 +1,4 @@
+import ChangePasswordButton from "./ChangePasswordButton";
 import EditProfileButton from "./EditProfileButton";
 import "./Profile.css"
 import ProfileInfoCard from "./ProfileInfoCard";
@@ -11,7 +12,7 @@ function ProfileInfo() {
                 <EditProfileButton />
             </div>
             <ProfileInfoCard />
-
+            <ChangePasswordButton />    
         </div>
     );
 }

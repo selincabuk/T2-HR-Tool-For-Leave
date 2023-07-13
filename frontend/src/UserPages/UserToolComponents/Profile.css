@@ -30,10 +30,11 @@
 }
 
 .profile__edit__holder {
-    margin-left: 90%;
+    margin-left: 66%;
     margin-right: auto;
     text-align: left;
-    justify-content: left;
+    justify-content: left;;
+    width: 15%;
 }
 
 .profile__table__div {
@@ -43,4 +44,12 @@
     max-height: 80vh;
     overflow: auto;
     border: 2px solid #f1f1f1
+}
+
+.pwd__button__div {
+  margin-top: 4vh;
+}
+
+.pwd__button {
+  background-color: #8CA2C2 !important;
 }

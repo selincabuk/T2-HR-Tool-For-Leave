@@ -79,3 +79,10 @@
  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     color: #395B8C !important;; 
  }
+
+ 
+.calendar__holder {
+  width: 80%;
+  margin: auto;
+  margin-top: 4vh;
+}

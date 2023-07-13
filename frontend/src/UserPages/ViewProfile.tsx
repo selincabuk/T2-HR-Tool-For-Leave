@@ -1,7 +1,6 @@
 import NavigationBarUser from "./UserToolComponents/NavigationBarUser";
 import "./UserPages.css";
 import ProfileInfo from "./UserToolComponents/ProfileInfo";
-import React from 'react';
 import { Tabs } from 'antd';
 import PreviousRequestsTable from "./UserToolComponents/PreviousRequestsTable";
 
