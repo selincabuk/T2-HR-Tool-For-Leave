@@ -11,11 +11,11 @@ function NavigationBarUser() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <NavLink to="/user/add-off-days" className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : "navbarLinks"}>Add Day Off</NavLink>
+              isPending ? "pending" : isActive ? "active" : "navbarLinks"}>Add Off Day</NavLink>
             <NavLink to="/user/view-profile" className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "active" : "navbarLinks"}>View Profile</NavLink>
             <NavLink to="/user/view-off" className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : "navbarLinks"}>View Days Off</NavLink>
+              isPending ? "pending" : isActive ? "active" : "navbarLinks"}>View Off Days</NavLink>
             <Nav className='logoutBtn'>
               <NavLink to="/logout" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : "navbarLinks"}>Log out</NavLink>
