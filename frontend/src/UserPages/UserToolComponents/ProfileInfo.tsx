@@ -1,5 +1,6 @@
 import EditProfileButton from "./EditProfileButton";
 import "./Profile.css"
+import ProfileInfoCard from "./ProfileInfoCard";
 
 function ProfileInfo() {
 
@@ -9,7 +10,7 @@ function ProfileInfo() {
             <div className="profile__edit__holder">
                 <EditProfileButton />
             </div>
-            
+            <ProfileInfoCard />
 
         </div>
     );

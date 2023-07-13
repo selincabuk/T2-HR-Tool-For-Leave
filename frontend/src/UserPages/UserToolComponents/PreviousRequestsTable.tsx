@@ -46,7 +46,7 @@ function PreviousRequestsTable() {
     }, []);
 
     return (
-        <div className='profile__info__table'>
+        <div className='profile__table__div'>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>

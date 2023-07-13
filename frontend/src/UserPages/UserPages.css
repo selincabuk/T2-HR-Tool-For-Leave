@@ -20,3 +20,11 @@
     border-radius: 6px;
     height: 80vh;
 }
+
+ .ant-tabs-tab.ant-tabs-tab .ant-tabs-tab-btn {
+    color: var(--colorPrimaryActive) !important;; 
+ }
+
+ .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #395B8C !important;; 
+ }

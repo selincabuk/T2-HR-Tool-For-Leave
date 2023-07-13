@@ -95,7 +95,7 @@
       "responses": [
         {
           "uuid": "82ceb244-e399-45c0-9b7c-669cfeebc849",
-          "body": "{\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"birthDate\": \"01/05/2002\",\n    \"gender\": \"Female\",\n    \"pwd\": \"pass\",\n}",
+          "body": "{\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"birthday\": \"01/05/2002\",\n    \"gender\": \"Female\",\n    \"pwd\": \"pass\",\n    \"totDays\": 70,\n    \"daysLeft\": 14\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",

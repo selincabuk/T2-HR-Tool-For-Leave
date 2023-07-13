@@ -28,12 +28,11 @@ function ViewProfile() {
         <div>
             <NavigationBarUser />
             <div className="tab__div">
-                <Tabs
+                <Tabs className="profile__card__label"
                     size="large"
                     onChange={onChange}
                     type="card"
                     items={items}
-
                 />
             </div>
         </div>
