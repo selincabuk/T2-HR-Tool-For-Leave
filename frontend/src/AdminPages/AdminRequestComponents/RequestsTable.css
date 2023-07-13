@@ -1,0 +1,16 @@
+.requests__table__div {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.request__button {
+    cursor: pointer;
+}
+
+.request__button__holder {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

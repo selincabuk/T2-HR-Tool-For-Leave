@@ -5,27 +5,28 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import EditActionButton from './EditActionButton';
-import DeleteIconButton from './DeleteIconButton';
 import Alert from '@mui/material/Alert';
 import { useState, useEffect } from 'react';
-import './Components.css';
+import './RequestsTable.css';
+import ApproveButton from './ApproveButton';
+import DescriptionButton from './DescriptionButton';
+import DeleteRequestButton from './DeleteRequestButton';
 
-function ListUsersTable() {
-
-    type User = {
+function RequestsTable() {
+    type Request = {
+        id: number,
         fname: string,
         lname: string,
         email: string,
-        birthDate: string,
-        gender: string
+        startDate: string,
+        endDate: string,
+        reason: string,
     }
-    // state to fetch users:
-    const [users, setUsers] = useState([] as User[]);
 
+    // state to fetch requests:
+    const [requests, setRequests] = useState([] as Request[]);
     // state if fetching fails:
     const [error, setError] = useState<boolean>(false);
-
     // to show loading animation:
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -33,12 +34,12 @@ function ListUsersTable() {
         const fetchData = async () => {
             setIsLoading(true)
             try {
-                const response = await fetch('http://localhost:3001/admin/users');
+                const response = await fetch('http://localhost:3001/admin/get-requests');
                 if (!response.ok) {
                     console.log("hataaaaaa")
                 }
                 const data = await response.json();
-                setUsers(data);
+                setRequests(data);
                 console.log(data);
                 setIsLoading(false)
                 setError(false)
@@ -51,7 +52,7 @@ function ListUsersTable() {
     }, []);
 
     return (
-        <div>
+        <div className='requests__table__div'>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="users table">
                     <TableHead>
@@ -59,15 +60,16 @@ function ListUsersTable() {
                             <TableCell align="center">First Name</TableCell>
                             <TableCell align="center">Last Name</TableCell>
                             <TableCell align="center">Email</TableCell>
-                            <TableCell align="center">Date of Birth</TableCell>
-                            <TableCell align="center">Gender</TableCell>
+                            <TableCell align="center">Start Date</TableCell>
+                            <TableCell align="center">End Date</TableCell>
+                            <TableCell align="center">Description</TableCell>
                             <TableCell align="center">Actions</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {users && !error && users.length > 0 && users.map((row: User) => (
+                        {requests && !error && requests.length > 0 && requests.map((row: Request) => (
                             <TableRow
-                                key={row.email}
+                                key={row.id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell align="center" component="th" scope="row">
@@ -77,27 +79,31 @@ function ListUsersTable() {
                                     {row.lname}
                                 </TableCell>
                                 <TableCell align="center">{row.email}</TableCell>
-                                <TableCell align="center">{row.birthDate}</TableCell>
-                                <TableCell align="center">{row.gender}</TableCell>
+                                <TableCell align="center">{row.startDate}</TableCell>
+                                <TableCell align="center">{row.endDate}</TableCell>
+                                <TableCell align="center">{row.reason}</TableCell>
                                 <TableCell align="center">
                                     <div className='request__button__holder'>
-                                        <EditActionButton /> <DeleteIconButton />
+                                        <DescriptionButton /><ApproveButton /><DeleteRequestButton />
                                     </div>
+                                   
                                 </TableCell>
+                                
                             </TableRow>
                         ))}
                     </TableBody>
                 </Table>
 
-                {error && !isLoading &&
+                {error && !isLoading && 
                     <Alert severity="error">Something went wrong. Please try again.</Alert>
                 }
-                {!isLoading && !error && users && users.length <= 0 &&
-                    <Alert severity="info">No user to show! Please register users first.</Alert>
-                }
+                {!isLoading && !error && requests && requests.length <= 0 &&
+                    <Alert severity="info">No requests available</Alert>
+                }     
             </TableContainer>
         </div>
-    );
+    )
+
 }
 
-export default ListUsersTable;
+export default RequestsTable;

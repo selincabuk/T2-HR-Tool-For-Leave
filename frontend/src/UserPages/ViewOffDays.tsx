@@ -8,7 +8,6 @@ function ViewOffDays() {
         <div>
             <NavigationBarUser />
             <div className="calendar__holder"> <CalendarForLeave /></div>
-           
         </div>
     );
 }
