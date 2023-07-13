@@ -57,12 +57,76 @@
       ],
       "enabled": true,
       "responseMode": null
+    },
+    {
+      "uuid": "93e02c1b-4d02-4cd5-a453-8b4632a8a201",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "user/get-request",
+      "responses": [
+        {
+          "uuid": "5a4ac128-9ed0-4875-ad3a-a9344edba58f",
+          "body": "[\n  {\n    \"id\": 1,\n    \"startDate\": \"12-03-2021\",\n    \"endDate\": \"17-03-2021\",\n    \"status\": \"Approved\"\n  },\n  {\n    \"id\": 2,\n    \"startDate\": \"12-04-2022\",\n    \"endDate\": \"17-05-2022\",\n    \"status\": \"Rejected\"\n  },\n  {\n    \"id\": 3,\n    \"startDate\": \"09-03-2023\",\n    \"endDate\": \"12-03-2023\",\n    \"status\": \"Rejected\"\n  },\n  {\n    \"id\": 4,\n    \"startDate\": \"04-08-2023\",\n    \"endDate\": \"12-3-2023\",\n    \"status\": \"Pending\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "30f556d9-82ca-4728-83a0-a3eff66e8ac5",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "user/profile-info",
+      "responses": [
+        {
+          "uuid": "82ceb244-e399-45c0-9b7c-669cfeebc849",
+          "body": "{\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"birthDate\": \"01/05/2002\",\n    \"gender\": \"Female\",\n    \"pwd\": \"pass\",\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
     }
   ],
   "rootChildren": [
     {
       "type": "route",
       "uuid": "eabf4580-2d3b-43e8-a275-f89d17a3ccc0"
+    },
+    {
+      "type": "route",
+      "uuid": "93e02c1b-4d02-4cd5-a453-8b4632a8a201"
+    },
+    {
+      "type": "route",
+      "uuid": "30f556d9-82ca-4728-83a0-a3eff66e8ac5"
     }
   ],
   "proxyMode": false,

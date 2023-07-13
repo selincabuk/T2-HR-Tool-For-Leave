@@ -12,25 +12,11 @@
     margin-top: 4vh;
 }
 
-
-.form__holder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.tab__div {
+    width: 80%;
     margin: auto;
-    margin-top: 8vh;
-    
-}
-.form__input {
-    margin: 10px;
-    border-radius: 1vw;
-    padding: 20px 30px;
-    transition: 0.2s;
-    box-shadow: #b3cae7;
-    min-width: 260px;
-    width: 20%;
-    border: 2px solid #b3cae7;
-    
-
+    margin-top: 4vh;
+    box-shadow: inset 0 0 0 1px #e0e0e0;
+    border-radius: 6px;
+    height: 80vh;
 }
