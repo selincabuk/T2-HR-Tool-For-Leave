@@ -8,7 +8,7 @@ function ProfileInfo() {
                 <EditProfileButton />
             </div>
             <div className="profile__info__box">
-                <p className="profile__info__label">First Name:</p>
+                <p className="profile__info__label">First Name:   </p>
                 <p className="profile__info__p">Ceren</p>
             </div>
             <div className="profile__info__box">
