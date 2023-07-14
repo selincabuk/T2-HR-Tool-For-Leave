@@ -1,0 +1,52 @@
+.datepicker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  
+  .datepicker-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .datepicker-input {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #8ca2c2 !important ;
+  }
+  
+  .datepicker-label {
+    color: #8ca2c2;
+    font-weight: bold;
+    
+  }
+  
+  .datepicker-picker {
+    background-color: #f0f9ff;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .datepicker-picker input {
+    width: 180px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .datepicker-picker .MuiSvgIcon-root {
+    color: #666;
+  }
+  
+  .datepicker-picker .MuiInputAdornment-root button {
+    color: #666;
+  }
+  
+  .datepicker-picker .MuiButtonBase-root:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  

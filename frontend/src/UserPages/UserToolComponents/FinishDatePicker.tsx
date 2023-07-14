@@ -4,9 +4,9 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import "./StartDatePicker.css";
+import "./FinishDatePicker.css";
 
-function DatePickerValue() {
+function DatePickerFinishValue() {
   const [value, setValue] = React.useState<Dayjs | null>(dayjs('2022-04-17'));
 
   return (
@@ -14,7 +14,7 @@ function DatePickerValue() {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DemoContainer components={['DatePicker']}>
           <div className="datepicker-wrapper">
-            <label className="datepicker-label">Select a Start Date</label>
+            <label className="datepicker-label">Select a Finish Date</label>
             <DatePicker
               className="datepicker-input"
               label=""
@@ -28,4 +28,4 @@ function DatePickerValue() {
   );
 }
 
-export default DatePickerValue;
+export default DatePickerFinishValue;

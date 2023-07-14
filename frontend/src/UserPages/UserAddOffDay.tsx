@@ -7,6 +7,7 @@ import NavigationBarUser from "./UserToolComponents/NavigationBarUser";
 import "./UserPages.css";
 import SelectExcuseLeave from './UserToolComponents/ExcuseLeaveSelect';
 import DatePickerValue from './UserToolComponents/StartDatePicker';
+import DatePickerFinishValue from './UserToolComponents/FinishDatePicker';
 
 
 
@@ -16,6 +17,7 @@ function UserAddOffDay() {
       <NavigationBarUser />
       <SelectExcuseLeave />
       <DatePickerValue />
+      <DatePickerFinishValue />
      
      
     </div>
