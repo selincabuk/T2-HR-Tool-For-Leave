@@ -12,7 +12,7 @@ export default function SelectExcuseLeave() {
       setexcuseLeave(event.target.value);
     };
 
-    return(<div className="select__center">
+    return(<div className="select__center" style={{marginTop: "30px"}}>
     <FormControl className='formControl' sx={{ m: 1, minWidth: 150 , maxWidth:200}}>
       <InputLabel
         id="demo-simple-select-autowidth-label"

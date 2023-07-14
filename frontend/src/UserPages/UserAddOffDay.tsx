@@ -8,6 +8,7 @@ import "./UserPages.css";
 import SelectExcuseLeave from './UserToolComponents/ExcuseLeaveSelect';
 import DatePickerValue from './UserToolComponents/StartDatePicker';
 import DatePickerFinishValue from './UserToolComponents/FinishDatePicker';
+import IconLabelButtons from './UserToolComponents/RequestOffDayButton';
 
 
 
@@ -18,6 +19,7 @@ function UserAddOffDay() {
       <SelectExcuseLeave />
       <DatePickerValue />
       <DatePickerFinishValue />
+      <IconLabelButtons />
      
      
     </div>
