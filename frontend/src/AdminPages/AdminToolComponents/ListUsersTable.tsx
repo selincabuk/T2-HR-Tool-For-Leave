@@ -56,12 +56,12 @@ function ListUsersTable() {
                 <Table sx={{ minWidth: 650 }} aria-label="users table">
                     <TableHead>
                         <TableRow>
-                            <TableCell align="center">First Name</TableCell>
-                            <TableCell align="center">Last Name</TableCell>
+                            <TableCell align="center">Ad</TableCell>
+                            <TableCell align="center">Soyad</TableCell>
                             <TableCell align="center">Email</TableCell>
-                            <TableCell align="center">Date of Birth</TableCell>
-                            <TableCell align="center">Gender</TableCell>
-                            <TableCell align="center">Actions</TableCell>
+                            <TableCell align="center">Doğum Tarihi</TableCell>
+                            <TableCell align="center">Cinsiyet</TableCell>
+                            <TableCell align="center"></TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
