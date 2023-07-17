@@ -11,7 +11,7 @@ import ApproveButton from './ApproveButton';
 import DescriptionButton from './DescriptionButton';
 import DeleteRequestButton from './DeleteRequestButton';
 
-type Request = {
+type Input = {
     id: number,
     fname: string,
     lname: string,
@@ -22,9 +22,13 @@ type Request = {
     status: string
 }
 
-type requestArray = Request[];
+type requestArray = Input[];
 
-function RequestsTable(props: requestArray) {
+interface RequestsTableProps {
+    requests: requestArray;
+  }
+
+function RequestsTable(props: RequestsTableProps) { 
     
     return (
         <div className='requests__table__div'>
@@ -41,7 +45,7 @@ function RequestsTable(props: requestArray) {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {props.requests && requests.length > 0 && requests.map((row: Request) => (
+                        {props.requests && props.requests.length > 0 && props.requests.map((row: Input) => (
                             <TableRow
                                 key={row.id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

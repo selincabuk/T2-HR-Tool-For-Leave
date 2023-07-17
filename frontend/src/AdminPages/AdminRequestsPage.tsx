@@ -47,12 +47,12 @@ function AdminRequestsPage() {
     }, []);
 
 
-    //  <RequestsTable requests={requests} />
+    //  
     return (
         <div>
             <NavigationBar />
             <FilterComponent />
-           
+            <RequestsTable requests={requests} />
             {error && !isLoading &&
                 <Alert severity="error">Something went wrong. Please try again.</Alert>
             }
