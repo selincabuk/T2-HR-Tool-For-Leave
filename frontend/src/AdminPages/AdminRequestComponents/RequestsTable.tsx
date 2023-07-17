@@ -36,11 +36,11 @@ function RequestsTable(props: RequestsTableProps) {
                 <Table sx={{ minWidth: 650 }} aria-label="users table">
                     <TableHead>
                         <TableRow>
-                            <TableCell align="center">İsim</TableCell>
-                            <TableCell align="center">Soyisim</TableCell>
-                            <TableCell align="center">Eposta</TableCell>
+                            <TableCell align="center">Ad</TableCell>
+                            <TableCell align="center">Soyad</TableCell>
+                            <TableCell align="center">Email</TableCell>
                             <TableCell align="center">İzin Başlangıç Tarihi</TableCell>
-                            <TableCell align="center">Bitiş Tarihi</TableCell>
+                            <TableCell align="center">İzin Bitiş Tarihi</TableCell>
                             <TableCell align="center">Detay/Onay/Red</TableCell>
                         </TableRow>
                     </TableHead>
