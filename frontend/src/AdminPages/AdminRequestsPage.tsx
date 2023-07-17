@@ -25,6 +25,9 @@ function AdminRequestsPage() {
     // to show loading animation:
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
+    // state for filtered requests:
+    const [filteredRequests, setFilteredRequests] = useState<requestArray>(requests);
+
     useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true)
@@ -46,17 +49,49 @@ function AdminRequestsPage() {
         fetchData();
     }, []);
 
+    useEffect(
+        () => {
+            setFilteredRequests(requests.filter((request) => request.status === "pending"));
+        }, [requests]
+    )
 
-    //  
+
+    // function for filtering requests:
+    const filterRequests = (filter: string) => {
+        if (filter === "pending") {
+            const filteredRequestsVar = requests.filter((request) => request.status === "pending");
+            setFilteredRequests(filteredRequestsVar);
+        } else if (filter === "approved") {
+            const filteredRequestsVar = requests.filter((request) => request.status === "approved");
+            setFilteredRequests(filteredRequestsVar);
+        } else if (filter === "rejected") {
+            const filteredRequestsVar = requests.filter((request) => request.status === "rejected");
+            setFilteredRequests(filteredRequestsVar);
+        } else if (filter === "all") {
+            setFilteredRequests(requests);
+        }
+        console.log(filter);
+        console.log(filteredRequests);
+    }
+
+    const [filter, setFilter] = useState<string>("pending");
+
+    const filterHandler = (value: string) => {
+        setFilter(value);
+        filterRequests(value)
+        console.log(value);
+    }
+
+
     return (
         <div>
             <NavigationBar />
-            <FilterComponent />
-            <RequestsTable requests={requests} />
+            <FilterComponent filterHandler={filterHandler}/>
+            <RequestsTable requests={filteredRequests} />
             {error && !isLoading &&
                 <Alert severity="error">Something went wrong. Please try again.</Alert>
             }
-            {!isLoading && !error && requests && requests.length <= 0 &&
+            {!isLoading && !error && filteredRequests && filteredRequests.length <= 0 &&
                 <Alert severity="info">No requests available</Alert>
             }
         </div>

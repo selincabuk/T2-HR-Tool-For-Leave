@@ -1,22 +1,18 @@
 import "./RequestsTable.css";
-import { useState } from 'react';
 
-function FilterComponent() {
+function FilterComponent(props: any) {
 
-    const [filter, setFilter] = useState<string>("pending");
-
-    const filterHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setFilter(event.target.value);
-        console.log(filter);
+    const filterStateHandler = (event: any) => {
+        props.filterHandler(event.target.value);
     }
-    
+
     return(
         <div className="filter">
-            <select className="filter__select" onChange={filterHandler}>
-                <option value="pending" className="filter__option">Onay Bekleyen</option>
-                <option value="approved" className="filter__option">Onaylanmış</option>
-                <option value="rejected" className="filter__option">Reddedilmiş</option>
-                <option value="all" className="filter__option">Tümü</option>
+            <select className="filter__select" onChange={filterStateHandler}>
+                <option value="pending" className="select__items">Onay Bekleyen</option>
+                <option value="approved" className="select__items">Onaylanmış</option>
+                <option value="rejected" className="select__items">Reddedilmiş</option>
+                <option value="all" className="select__items">Tümü</option>
             </select>
         </div>
     );
