@@ -101,12 +101,13 @@
 .filter {
   margin-top: 2vh;
   margin-bottom: 1vh;
-  margin-left: 15%;
+  margin-left: 150%;
   display: flex;
+  
 }
 
 .filter__select {
-  width: 15%;
+  width: 100%;
   height: 4vh;
   border-radius: 5px;
   border: 1px solid #ccc;

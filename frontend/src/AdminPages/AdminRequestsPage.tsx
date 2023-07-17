@@ -113,7 +113,7 @@ function AdminRequestsPage() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                minWidth:'500px'
+                
                
               }}
             >
