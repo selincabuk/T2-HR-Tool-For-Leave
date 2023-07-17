@@ -141,6 +141,34 @@
       ],
       "enabled": true,
       "responseMode": null
+    },
+    {
+      "uuid": "18896a99-296c-4224-9060-2ace0cb2caf8",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/edit/:userId",
+      "responses": [
+        {
+          "uuid": "4254edac-e656-4cc2-a95b-0da76d0cfc96",
+          "body": " {\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"birthday\": \"01/05/2002\",\n    \"gender\": \"kadın\",\n    \"pwd\": \"pass\"\n  }",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -159,6 +187,10 @@
     {
       "type": "route",
       "uuid": "de67d8c6-b279-4848-a9d9-b6e02bd150d1"
+    },
+    {
+      "type": "route",
+      "uuid": "18896a99-296c-4224-9060-2ace0cb2caf8"
     }
   ],
   "proxyMode": false,

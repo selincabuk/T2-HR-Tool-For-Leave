@@ -12,6 +12,7 @@ import ViewProfile from "./UserPages/ViewProfile";
 import UserAddOffDay from "./UserPages/UserAddOffDay";
 import EditProfile from "./UserPages/EditProfile";
 import AdminRequestsPage from "./AdminPages/AdminRequestsPage";
+import AdminEditUserPage from "./AdminPages/AdminEditUserPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="user/add-off-days" element={<UserAddOffDay />} />
               <Route path="user/view-profile" element={<ViewProfile />} />
               <Route path="user/edit-profile" element={<EditProfile />} />
+              <Route path="admin/edit/:userId" element={<AdminEditUserPage />} />
             </Routes>
     </BrowserRouter>
   );
