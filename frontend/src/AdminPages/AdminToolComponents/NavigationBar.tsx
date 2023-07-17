@@ -6,20 +6,22 @@ import './NavigationBar.css';
 
 function NavigationBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="fullWidthNav" data-bs-theme="dark">
-      <Container>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+    <Navbar collapseOnSelect expand="lg" className="fullWidthNav" data-bs-theme="dark" style={{marginRight: "0px !important"}}>
+      <Container className='holdLinks' style={{marginRight: "0"}}>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginRight: "0px !important"}} />
+        <Navbar.Collapse id="responsive-navbar-nav" style={{marginRight: "0px !important"}}>
+        <NavLink to="/admin/" className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : "navbarLinks"}>İstekler</NavLink>
           <NavLink to="/admin/users" className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : "navbarLinks"}>List Users</NavLink>
+            isPending ? "pending" : isActive ? "active" : "navbarLinks"}>Kullanıcılar</NavLink>
           <NavLink to="/admin/register-user" className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : "navbarLinks"}>Register User</NavLink>
+            isPending ? "pending" : isActive ? "active" : "navbarLinks"}>Yeni Kullanıcı Kayıt</NavLink>
           <NavLink to="/admin/view-off" className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : "navbarLinks"}>View Days Off</NavLink>
-          <Nav className='logoutBtn'>
+            isPending ? "pending" : isActive ? "active" : "navbarLinks"}>İzin Takvimi</NavLink>
+          <div className='logoutBtn' style={{marginRight: "0px"}} >
             <NavLink to="/admin/logout" className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : "navbarLinks"}>Log out</NavLink>
-          </Nav>
+              isPending ? "pending" : isActive ? "active" : "navbarLinks"}>Çıkış Yap</NavLink>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

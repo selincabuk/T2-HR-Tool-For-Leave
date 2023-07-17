@@ -123,7 +123,7 @@
       "responses": [
         {
           "uuid": "281d89c9-8676-4f0c-877b-5e81bfaa2495",
-          "body": "[\n  {\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"startDate\": \"15/08/2023\",\n    \"endDate\": \"23/08/2023\",\n    \"reason\": \"canım tatil yapmak istiyor\"\n  },\n  {\n    \"id\": 2,\n    \"fname\": \"Selin\",\n    \"lname\": \"Çabuk\",\n    \"email\": \"sln@gmail.com\",\n    \"startDate\": \"30/08/2023\",\n    \"endDate\": \"04/09/2023\",\n    \"reason\": \"Bi Çeşme'ye gidip geliyim\"\n  }\n]",
+          "body": "[\n  {\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"startDate\": \"15/08/2023\",\n    \"endDate\": \"23/08/2023\",\n    \"reason\": \"canım tatil yapmak istiyor\",\n    \"status\": \"pending\"\n  },\n  {\n    \"id\": 2,\n    \"fname\": \"Selin\",\n    \"lname\": \"Çabuk\",\n    \"email\": \"sln@gmail.com\",\n    \"startDate\": \"30/08/2023\",\n    \"endDate\": \"04/09/2023\",\n    \"reason\": \"Bi Çeşme'ye gidip geliyim\",\n    \"status\": \"rejected\"\n  }\n]",
           "latency": 0,
           "statusCode": 200,
           "label": "",
