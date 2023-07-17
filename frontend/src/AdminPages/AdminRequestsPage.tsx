@@ -2,9 +2,10 @@ import FilterComponent from "./AdminRequestComponents/FilterComponent";
 import RequestsTable from "./AdminRequestComponents/RequestsTable";
 import NavigationBar from "./AdminToolComponents/NavigationBar";
 import { useEffect, useState } from "react";
+import Alert from '@mui/material/Alert';
 
 function AdminRequestsPage() {
-    type Request = {
+    type Input = {
         id: number,
         fname: string,
         lname: string,
@@ -15,7 +16,7 @@ function AdminRequestsPage() {
         status: string
     }
 
-    type requestArray = Request[];
+    type requestArray = Input[];
 
     // state to fetch requests:
     const [requests, setRequests] = useState<requestArray>([]);
@@ -45,11 +46,19 @@ function AdminRequestsPage() {
         fetchData();
     }, []);
 
+
+    //  <RequestsTable requests={requests} />
     return (
         <div>
             <NavigationBar />
             <FilterComponent />
-            <RequestsTable requests={requests}/>
+           
+            {error && !isLoading &&
+                <Alert severity="error">Something went wrong. Please try again.</Alert>
+            }
+            {!isLoading && !error && requests && requests.length <= 0 &&
+                <Alert severity="info">No requests available</Alert>
+            }
         </div>
     )
 }

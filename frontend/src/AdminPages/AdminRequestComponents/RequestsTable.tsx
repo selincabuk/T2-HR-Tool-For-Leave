@@ -5,7 +5,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import Alert from '@mui/material/Alert';
 import { useState, useEffect } from 'react';
 import './RequestsTable.css';
 import ApproveButton from './ApproveButton';
@@ -42,7 +41,7 @@ function RequestsTable(props: requestArray) {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {props.requests && !error && requests.length > 0 && requests.map((row: Request) => (
+                        {props.requests && requests.length > 0 && requests.map((row: Request) => (
                             <TableRow
                                 key={row.id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -67,13 +66,6 @@ function RequestsTable(props: requestArray) {
                         ))}
                     </TableBody>
                 </Table>
-
-                {error && !isLoading &&
-                    <Alert severity="error">Something went wrong. Please try again.</Alert>
-                }
-                {!isLoading && !error && requests && requests.length <= 0 &&
-                    <Alert severity="info">No requests available</Alert>
-                }
             </TableContainer>
         </div>
     )
