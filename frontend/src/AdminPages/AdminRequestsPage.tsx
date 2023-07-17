@@ -3,8 +3,26 @@ import RequestsTable from "./AdminRequestComponents/RequestsTable";
 import NavigationBar from "./AdminToolComponents/NavigationBar";
 import { useEffect, useState } from "react";
 import Alert from '@mui/material/Alert';
+import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
+import RecentActorsOutlinedIcon from '@mui/icons-material/RecentActorsOutlined';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
+
 
 function AdminRequestsPage() {
+    const theme = createTheme({
+        palette: {
+          primary: {
+            main: '#1392c2', 
+          },
+        },
+      });
     type Input = {
         id: number,
         fname: string,
@@ -15,6 +33,7 @@ function AdminRequestsPage() {
         reason: string,
         status: string
     }
+    
 
     type requestArray = Input[];
 
@@ -84,18 +103,28 @@ function AdminRequestsPage() {
 
 
     return (
-        <div>
-            <NavigationBar />
-            <FilterComponent filterHandler={filterHandler}/>
-            <RequestsTable requests={filteredRequests} />
-            {error && !isLoading &&
-                <Alert severity="error">Something went wrong. Please try again.</Alert>
-            }
-            {!isLoading && !error && filteredRequests && filteredRequests.length <= 0 &&
-                <Alert severity="info">No requests available</Alert>
-            }
-        </div>
-    )
-}
-
-export default AdminRequestsPage;
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <NavigationBar />
+          <Container component="main" >
+            <Box
+              sx={{
+                marginTop: 1,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                minWidth:'500px'
+               
+              }}
+            >
+              <FilterComponent filterHandler={filterHandler} />
+              <RequestsTable requests={filteredRequests} />
+             {error && !isLoading && <Alert severity="error">Something went wrong. Please try again.</Alert>}
+              {!isLoading && !error && filteredRequests && filteredRequests.length <= 0 && <Alert severity="info">No requests available</Alert>}
+            </Box>
+          </Container>
+        </ThemeProvider>
+      );
+    }
+    
+    export default AdminRequestsPage;

@@ -7,7 +7,7 @@ function FilterComponent(props: any) {
     }
 
     return(
-        <div className="filter">
+        <div className="filter" style={{width:'1000'}}>
             <select className="filter__select" onChange={filterStateHandler}>
                 <option value="pending" className="select__items">Onay Bekleyen</option>
                 <option value="approved" className="select__items">Onaylanmış</option>
