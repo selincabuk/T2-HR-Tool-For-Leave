@@ -87,3 +87,29 @@
     justify-content: center;
     text-align: center;
   }
+
+  .list__button__hover__p {
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px 12px;
+    z-index: 9991;
+    border-radius: 5px;
+}
+
+.filter {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  margin-left: 15%;
+  display: flex;
+}
+
+.filter__select {
+  width: 15%;
+  height: 4vh;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding-left: 1vw;
+}
