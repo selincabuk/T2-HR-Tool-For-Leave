@@ -5,9 +5,10 @@ import Stack from '@mui/material/Stack';
 import "./RequestOffdayButton.css"
 
 
+
 function IconLabelButtons() {
   return (
-    <div className="button-container">
+    <div className="button-container"  style={{height:30}}>
       <Stack direction="row" spacing={2}>
         <Button className='button' variant="contained" endIcon={<SendIcon />}>
           Request
