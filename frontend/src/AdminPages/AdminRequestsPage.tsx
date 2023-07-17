@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Alert from '@mui/material/Alert';
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
-import RecentActorsOutlinedIcon from '@mui/icons-material/RecentActorsOutlined';
+import StickyNote2Icon from '@mui/icons-material/StickyNote2';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
@@ -106,7 +106,7 @@ function AdminRequestsPage() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <NavigationBar />
-          <Container component="main" >
+          <Container component="main"  >
             <Box
               sx={{
                 marginTop: 1,
@@ -117,10 +117,17 @@ function AdminRequestsPage() {
                
               }}
             >
+
+               <Avatar sx={{ m: 1, bgcolor: '#9f5cbe' }}>
+            <StickyNote2Icon />
+          </Avatar>
+          <Typography component="h1" variant="h5" sx={{ mb: 3 }} >
+            Kullanıcı İzin İstek Listesi
+          </Typography>
               <FilterComponent filterHandler={filterHandler} />
               <RequestsTable requests={filteredRequests} />
-             {error && !isLoading && <Alert severity="error">Something went wrong. Please try again.</Alert>}
-              {!isLoading && !error && filteredRequests && filteredRequests.length <= 0 && <Alert severity="info">No requests available</Alert>}
+             {error && !isLoading && <Alert severity="error">Bir şeyler ters gitti. Lütfen sonra tekrar deneyin.</Alert>}
+              {!isLoading && !error && filteredRequests && filteredRequests.length <= 0 && <Alert severity="info" sx={{ mt: 3 }}>Gösterilecek istek bulunmamaktadır.</Alert>}
             </Box>
           </Container>
         </ThemeProvider>

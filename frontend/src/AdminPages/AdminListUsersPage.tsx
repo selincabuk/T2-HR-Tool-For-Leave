@@ -125,12 +125,12 @@ function AdminListUsersPage() {
 
           <FilterUsers filterHandler={filterHandler} />
 
-          <ListUsersTable users={filteredUsers} />
+          <ListUsersTable users={filteredUsers}  />
           {error && !isLoading &&
             <Alert severity="error">Bir şeyler ters gitti. Lütfen sonra tekrar deneyin.</Alert>
           }
           {!isLoading && !error && filteredUsers && filteredUsers.length <= 0 &&
-            <Alert severity="info">Gösterilecek kullanıcı yok.</Alert>
+            <Alert severity="info" sx={{ mt: 3 }}>Gösterilecek kullanıcı bulunmamaktadır. </Alert>
           }
 
 

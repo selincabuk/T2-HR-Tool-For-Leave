@@ -26,7 +26,7 @@ function ListUsersTable( { users }: UserProps ) {
     return (
         <div>
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} aria-label="users table">
+                <Table sx={{ minWidth: 800 }} aria-label="users table">
                     <TableHead>
                         <TableRow>
                             <TableCell align="center">Ad</TableCell>

@@ -7,7 +7,7 @@ function FilterUsers(props: any) {
     }
 
     return(
-        <div className="filter"  style={{marginLeft:'-116%'}}>
+        <div className="filter"  style={{marginLeft:'-154%', marginBottom:'35px'}}>
             <select className="filter__select" onChange={filterStateHandler}>
                 <option value="visible" className="">Aktif Kullanıcılar</option>
                 <option value="invisible" className="">Görünmez Kullanıcılar</option>
