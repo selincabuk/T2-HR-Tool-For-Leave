@@ -14,7 +14,7 @@ function DatePickerValue() {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DemoContainer components={['DatePicker']}>
           <div className="datepicker-wrapper">
-            <label className="datepicker-label">Doğum Günü</label>
+            <label className="datepicker-label" style={{fontWeight:"normal", color: "gray"}} >Doğum Günü</label>
             <DatePicker
               className="datepicker-input"
               label=""
