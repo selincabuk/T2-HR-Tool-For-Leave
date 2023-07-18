@@ -13,6 +13,7 @@ import Alert from '@mui/material/Alert';
 import FilterUsers from "./AdminToolComponents/FilterUsers";
 import { useState, useEffect } from 'react';
 import StickyFooter from "../StickyFooter";
+import AdminSideBar from "./AdminNavigation/AdminSideBar";
 
 function Copyright(props: any) {
   return (
@@ -106,12 +107,13 @@ function AdminListUsersPage() {
 
   return (
     <ThemeProvider theme={theme}>
-      <NavigationBar />
+      <div className="page__holder">
+      <AdminSideBar />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 1,
+            marginTop: "4vh",
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -139,6 +141,7 @@ function AdminListUsersPage() {
         
       </Container>
       <StickyFooter />
+      </div>
     </ThemeProvider>
   );
 }

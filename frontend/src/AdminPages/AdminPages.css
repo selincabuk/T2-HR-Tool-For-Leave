@@ -7,8 +7,8 @@
 }
 
 .calendar__holder {
-    width: 80%;
     margin: auto;
+    justify-content: center;
     margin-top: 4vh;
 }
 

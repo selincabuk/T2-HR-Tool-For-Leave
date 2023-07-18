@@ -12,128 +12,129 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import StickyFooter from "../StickyFooter";
+import AdminSideBar from "./AdminNavigation/AdminSideBar";
 
 
 
 
 function AdminRequestsPage() {
-    const theme = createTheme({
-        palette: {
-          primary: {
-            main: '#1392c2', 
-          },
-        },
-      });
-    type Input = {
-        id: number,
-        fname: string,
-        lname: string,
-        email: string,
-        startDate: string,
-        endDate: string,
-        reason: string,
-        status: string
-    }
-    
-
-    type requestArray = Input[];
-
-    // state to fetch requests:
-    const [requests, setRequests] = useState<requestArray>([]);
-    // state if fetching fails:
-    const [error, setError] = useState<boolean>(false);
-    // to show loading animation:
-    const [isLoading, setIsLoading] = useState<boolean>(false);
-
-    // state for filtered requests:
-    const [filteredRequests, setFilteredRequests] = useState<requestArray>(requests);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            setIsLoading(true)
-            try {
-                const response = await fetch('http://localhost:3001/admin/get-requests');
-                if (!response.ok) {
-                    console.log("hataaaaaa")
-                }
-                const data = await response.json();
-                setRequests(data);
-                console.log(data);
-                setIsLoading(false)
-                setError(false)
-            } catch (error) {
-                setError(true)
-                setIsLoading(false)
-            }
-        };
-        fetchData();
-    }, []);
-
-    useEffect(
-        () => {
-            setFilteredRequests(requests.filter((request) => request.status === "pending"));
-        }, [requests]
-    )
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#1392c2',
+      },
+    },
+  });
+  type Input = {
+    id: number,
+    fname: string,
+    lname: string,
+    email: string,
+    startDate: string,
+    endDate: string,
+    reason: string,
+    status: string
+  }
 
 
-    // function for filtering requests:
-    const filterRequests = (filter: string) => {
-        if (filter === "pending") {
-            const filteredRequestsVar = requests.filter((request) => request.status === "pending");
-            setFilteredRequests(filteredRequestsVar);
-        } else if (filter === "approved") {
-            const filteredRequestsVar = requests.filter((request) => request.status === "approved");
-            setFilteredRequests(filteredRequestsVar);
-        } else if (filter === "rejected") {
-            const filteredRequestsVar = requests.filter((request) => request.status === "rejected");
-            setFilteredRequests(filteredRequestsVar);
-        } else if (filter === "all") {
-            setFilteredRequests(requests);
+  type requestArray = Input[];
+
+  // state to fetch requests:
+  const [requests, setRequests] = useState<requestArray>([]);
+  // state if fetching fails:
+  const [error, setError] = useState<boolean>(false);
+  // to show loading animation:
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  // state for filtered requests:
+  const [filteredRequests, setFilteredRequests] = useState<requestArray>(requests);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true)
+      try {
+        const response = await fetch('http://localhost:3001/admin/get-requests');
+        if (!response.ok) {
+          console.log("hataaaaaa")
         }
-        console.log(filter);
-        console.log(filteredRequests);
+        const data = await response.json();
+        setRequests(data);
+        console.log(data);
+        setIsLoading(false)
+        setError(false)
+      } catch (error) {
+        setError(true)
+        setIsLoading(false)
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(
+    () => {
+      setFilteredRequests(requests.filter((request) => request.status === "pending"));
+    }, [requests]
+  )
+
+
+  // function for filtering requests:
+  const filterRequests = (filter: string) => {
+    if (filter === "pending") {
+      const filteredRequestsVar = requests.filter((request) => request.status === "pending");
+      setFilteredRequests(filteredRequestsVar);
+    } else if (filter === "approved") {
+      const filteredRequestsVar = requests.filter((request) => request.status === "approved");
+      setFilteredRequests(filteredRequestsVar);
+    } else if (filter === "rejected") {
+      const filteredRequestsVar = requests.filter((request) => request.status === "rejected");
+      setFilteredRequests(filteredRequestsVar);
+    } else if (filter === "all") {
+      setFilteredRequests(requests);
     }
+    console.log(filter);
+    console.log(filteredRequests);
+  }
 
-    const [filter, setFilter] = useState<string>("pending");
+  const [filter, setFilter] = useState<string>("pending");
 
-    const filterHandler = (value: string) => {
-        setFilter(value);
-        filterRequests(value)
-        console.log(value);
-    }
+  const filterHandler = (value: string) => {
+    setFilter(value);
+    filterRequests(value)
+    console.log(value);
+  }
 
 
-    return (
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <NavigationBar />
-          <Container component="main"  >
-            <Box
-              sx={{
-                marginTop: 1,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                
-               
-              }}
-            >
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div className="page__holder">
+        <AdminSideBar />
+        <Container component="main"  >
+          <Box
+            sx={{
+              marginTop: "4vh",
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <Avatar sx={{ m: 1, bgcolor: '#9f5cbe' }}>
+              <StickyNote2Icon />
+            </Avatar>
+            <Typography component="h1" variant="h5" sx={{ mb: 3 }} >
+              Kullanıcı İzin İstek Listesi
+            </Typography>
+            <FilterComponent filterHandler={filterHandler} />
+            <RequestsTable requests={filteredRequests} />
+            {error && !isLoading && <Alert severity="error" sx={{ mt: 3 }} >Bir şeyler ters gitti. Lütfen sonra tekrar deneyin.</Alert>}
+            {!isLoading && !error && filteredRequests && filteredRequests.length <= 0 && <Alert severity="info" sx={{ mt: 3 }}>Gösterilecek istek bulunmamaktadır.</Alert>}
+          </Box>
+        </Container>
 
-               <Avatar sx={{ m: 1, bgcolor: '#9f5cbe' }}>
-            <StickyNote2Icon />
-          </Avatar>
-          <Typography component="h1" variant="h5" sx={{ mb: 3 }} >
-            Kullanıcı İzin İstek Listesi
-          </Typography>
-              <FilterComponent filterHandler={filterHandler} />
-              <RequestsTable requests={filteredRequests} />
-             {error && !isLoading && <Alert severity="error"sx={{ mt: 3 }} >Bir şeyler ters gitti. Lütfen sonra tekrar deneyin.</Alert>}
-              {!isLoading && !error && filteredRequests && filteredRequests.length <= 0 && <Alert severity="info" sx={{ mt: 3 }}>Gösterilecek istek bulunmamaktadır.</Alert>}
-            </Box>
-          </Container>
-          <StickyFooter />
-        </ThemeProvider>
-      );
-    }
-    
-    export default AdminRequestsPage;
+        <StickyFooter />
+      </div>
+    </ThemeProvider>
+  );
+}
+
+export default AdminRequestsPage;
