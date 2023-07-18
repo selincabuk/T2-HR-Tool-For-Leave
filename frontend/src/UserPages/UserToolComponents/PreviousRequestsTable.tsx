@@ -51,9 +51,9 @@ function PreviousRequestsTable() {
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell align='center'>Start Date</TableCell>
-                            <TableCell align="center">End Date</TableCell>
-                            <TableCell align="center">Status</TableCell>
+                            <TableCell align='center'>Başlama Tarihi</TableCell>
+                            <TableCell align="center">Bitiş Tarihi</TableCell>
+                            <TableCell align="center">Durum</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

@@ -12,6 +12,7 @@ import Link from '@mui/material/Link';
 import Alert from '@mui/material/Alert';
 import FilterUsers from "./AdminToolComponents/FilterUsers";
 import { useState, useEffect } from 'react';
+import StickyFooter from "../StickyFooter";
 
 function Copyright(props: any) {
   return (
@@ -135,8 +136,9 @@ function AdminListUsersPage() {
 
 
         </Box>
-        <Copyright sx={{ mt: 5 }} />
+        
       </Container>
+      <StickyFooter />
     </ThemeProvider>
   );
 }

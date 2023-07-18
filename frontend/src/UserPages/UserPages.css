@@ -7,8 +7,6 @@
 }
 
 .calendar__holder {
-<<<<<<< Updated upstream
-=======
     width: 80%;
     margin: auto;
     margin-top: 4vh;
@@ -86,12 +84,11 @@
 
  
 .calendar__holder {
->>>>>>> Stashed changes
+
   width: 80%;
   margin: auto;
   margin-top: 4vh;
 }
-<<<<<<< Updated upstream
 
 .tab__div {
   width: 80%;
@@ -162,5 +159,3 @@
   margin: auto;
   margin-top: 4vh;
 }
-=======
->>>>>>> Stashed changes

@@ -3,7 +3,7 @@ import "./UserPages.css";
 import ProfileInfo from "./UserToolComponents/ProfileInfo";
 import { Tabs } from 'antd';
 import PreviousRequestsTable from "./UserToolComponents/PreviousRequestsTable";
-
+import StickyFooter from "../StickyFooter";
 
 function ViewProfile() {
     const onChange = (key: string) => {
@@ -13,12 +13,12 @@ function ViewProfile() {
     const items = [
         {
             key: "tab1",
-            label: "Profile Information",
+            label: "Profil Bilgisi",
             children: <ProfileInfo />,
         },
         {
             key: "tab2",
-            label: "Previous Requests",
+            label: "Önceki İstekler",
             children: <PreviousRequestsTable />,
         },
     ];
@@ -34,6 +34,7 @@ function ViewProfile() {
                     items={items}
                 />
             </div>
+            <StickyFooter />
         </div>
     );
 }

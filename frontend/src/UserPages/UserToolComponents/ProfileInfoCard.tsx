@@ -51,25 +51,25 @@ export default function ProfileInfoCard() {
                     <MDBRow className="g-0">
                         {userInfo &&
                             <MDBCardBody className="p-4">
-                                <MDBTypography tag="h6">Profile Information</MDBTypography>
+                                <MDBTypography tag="h6">Profil Bilgisi</MDBTypography>
                                 <hr className="mt-0 mb-4" />
                                 <MDBRow className="pt-1">
                                     <MDBCol size="6" className="mb-3">
-                                        <MDBTypography tag="h6">Name</MDBTypography>
+                                        <MDBTypography tag="h6">Ad</MDBTypography>
                                         <MDBCardText className="text-muted">{userInfo?.fname + " " + userInfo?.lname}</MDBCardText>
                                     </MDBCol>
                                     <MDBCol size="6" className="mb-3">
-                                        <MDBTypography tag="h6">Email</MDBTypography>
+                                        <MDBTypography tag="h6">Soyad</MDBTypography>
                                         <MDBCardText className="text-muted">{userInfo?.email}</MDBCardText>
                                     </MDBCol>
                                 </MDBRow>
                                 <MDBRow className="pt-1">
                                     <MDBCol size="6" className="mb-3">
-                                        <MDBTypography tag="h6">Birthday</MDBTypography>
+                                        <MDBTypography tag="h6">Doğum Günü</MDBTypography>
                                         <MDBCardText className="text-muted">{userInfo?.birthday}</MDBCardText>
                                     </MDBCol>
                                     <MDBCol size="6" className="mb-3">
-                                        <MDBTypography tag="h6">Gender</MDBTypography>
+                                        <MDBTypography tag="h6">Cinsiyet</MDBTypography>
                                         <MDBCardText className="text-muted">{userInfo?.gender}</MDBCardText>
                                     </MDBCol>
                                 </MDBRow>
@@ -77,11 +77,11 @@ export default function ProfileInfoCard() {
                                 <hr className="mt-0 mb-4" />
                                 <MDBRow className="pt-1">
                                     <MDBCol size="6" className="mb-3">
-                                        <MDBTypography tag="h6">Total Off Day Count</MDBTypography>
+                                        <MDBTypography tag="h6">Toplam İzinli Gün Sayısı</MDBTypography>
                                         <MDBCardText className="text-muted">{userInfo?.totDays}</MDBCardText>
                                     </MDBCol>
                                     <MDBCol size="6" className="mb-3">
-                                        <MDBTypography tag="h6">Off Days Left</MDBTypography>
+                                        <MDBTypography tag="h6">Kalan İzinli Gün Sayısı</MDBTypography>
                                         <MDBCardText className="text-muted">{userInfo?.daysLeft}</MDBCardText>
                                     </MDBCol>
                                 </MDBRow>

@@ -19,7 +19,7 @@ export default function SelectExcuseLeave() {
         className="select__input"
         
       >
-        Excuse Leave
+        İzin Sebebi
       </InputLabel>
       <Select 
 
@@ -29,19 +29,23 @@ export default function SelectExcuseLeave() {
         onChange={handleChange}
         autoWidth
         label="Excuse Leave"
-        style={{ backgroundColor: "#f0f9ff" }}
+        sx={{
+         
+          '& .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#b3cae7', // Seçili olmayan öğelerin çerçeve rengi
+          },
+        }}
       >
-      <MenuItem value="">
-        <em>None</em>
+      <MenuItem value=""sx={{width:200}}>
+        <em>-</em>
       </MenuItem>
-      <MenuItem value="sick" style={{border: "1px solid #b3cae7" }}>Sick Leave</MenuItem>
-      <MenuItem value="vacation"style={{border: "1px solid #b3cae7" }}>Vacation Leave</MenuItem>
-      <MenuItem value="personal"style={{border: "1px solid #b3cae7" }}>Personal Leave</MenuItem>
-      <MenuItem value="family"style={{border: "1px solid #b3cae7" }}>Family Leave</MenuItem>
-      <MenuItem value="bereavement" style={{border: "1px solid #b3cae7" }}>Bereavement Leave</MenuItem>
-      <MenuItem value="maternity"style={{border: "1px solid #b3cae7" }}>Maternity Leave</MenuItem>
-      <MenuItem value="paternity"style={{border: "1px solid #b3cae7" }}>Paternity Leave</MenuItem>
-      <MenuItem value="other"style={{border: "1px solid #b3cae7" }}>Other</MenuItem>
+      <MenuItem value="sick" style={{border: "1px solid #b3cae7" }}>Hastalık</MenuItem>
+      <MenuItem value="vacation"style={{border: "1px solid #b3cae7" }}>Tatil</MenuItem>
+      <MenuItem value="personal"style={{border: "1px solid #b3cae7" }}>Kişisel</MenuItem>
+      <MenuItem value="family"style={{border: "1px solid #b3cae7" }}>Aile</MenuItem>
+      <MenuItem value="bereavement" style={{border: "1px solid #b3cae7" }}>Yas</MenuItem>
+      <MenuItem value="maternity"style={{border: "1px solid #b3cae7" }}>Doğum</MenuItem>
+      <MenuItem value="other"style={{border: "1px solid #b3cae7" }}>Diğer</MenuItem>
     </Select>
     </FormControl>
     </div>)

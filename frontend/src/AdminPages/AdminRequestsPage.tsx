@@ -11,6 +11,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import StickyFooter from "../StickyFooter";
 
 
 
@@ -126,10 +127,11 @@ function AdminRequestsPage() {
           </Typography>
               <FilterComponent filterHandler={filterHandler} />
               <RequestsTable requests={filteredRequests} />
-             {error && !isLoading && <Alert severity="error">Bir şeyler ters gitti. Lütfen sonra tekrar deneyin.</Alert>}
+             {error && !isLoading && <Alert severity="error"sx={{ mt: 3 }} >Bir şeyler ters gitti. Lütfen sonra tekrar deneyin.</Alert>}
               {!isLoading && !error && filteredRequests && filteredRequests.length <= 0 && <Alert severity="info" sx={{ mt: 3 }}>Gösterilecek istek bulunmamaktadır.</Alert>}
             </Box>
           </Container>
+          <StickyFooter />
         </ThemeProvider>
       );
     }

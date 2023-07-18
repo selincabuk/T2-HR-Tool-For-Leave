@@ -18,6 +18,7 @@ import Radio from '@mui/material/Radio';
 import FormLabel from '@mui/material/FormLabel';
 import DatePickerValue from './StartDatePicker';
 import "./StartDatePicker.css"
+import StickyFooter from '../../StickyFooter';
 
 function Copyright(props: any) {
   return (
@@ -162,6 +163,7 @@ export default function SignUp() {
         </Box>
         <Copyright sx={{ mt: 5 }} />
       </Container>
+      <StickyFooter />
     </ThemeProvider>
   );
 }
