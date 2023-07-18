@@ -11,3 +11,7 @@
     margin: auto;
     margin-top: 4vh;
 }
+
+.page__holder {
+    display: flex;
+}

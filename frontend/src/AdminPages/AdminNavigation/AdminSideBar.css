@@ -1,46 +1,70 @@
-.admin-sidebar {
-    background-color: var(--colorPrimary);
-    height: 100vh;
+.sidebar__divider {
+  list-style-type: none;
+}
+
+.sidebar__divider__closed {
+  list-style-type: none;
+  display: none;
+}
+
+.sidebar {
+  background-color: var(--colorPrimary);
+  height: 100vh;
+}
+
+.sidebar__items {
+  margin-right: 1vw;
+  padding: 2vh 1vw;
+}
+
+.sidebar__items:hover {
+  background-color: black
+}
+
+.sidebar__list {
+  margin-top: 4vh !important;
+}
+
+.sidebar a {
+  color: black;
+  font-size: 2.1vh;
+}
+
+.sidebar a:hover {
+  color: white;
+  font-size: 2.1vh;
+}
+
+.sidebar__logout__divider {
+  position: relative;
+}
+
+.sidebar__first__list {
+  overflow-x: visible;
+}
+
+.sidebar__second__list {
+  height: 85%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar__third__list {
+  max-height: 10%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar__divider__middle {
+  margin-bottom: 2vh;
+}
+
+.sidebar__avatar {
+  background-color: #9f5cbe !important;
+  width: 36px !important;
+  height: 36px !important;
 }
 
 .sidebar__arrow {
-    margin-top: 1vh;
-    cursor: pointer;
-    right: -0.75rem;
-    top: 2.25rem;
-    width: 1.75rem;
-    border-color: var(--colorPrimaryActive);
-    border-width: 2px;
-    border-radius: 9999px;
-  }
-
-  .sidebar__elements {
-    display: flex;
-    border-radius: 0.375rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    margin-right: 1vw;
-    align-items: center;
-    margin-left: 1.5vw;
-  }
-
-  .sidebar__elements a {
-    color: #0b406c;
-    font-size: 2.1vh;
-  }
-
-  .sidebar__elements a:hover {
-    color: #ffffff;
-    font-size: 2.1vh;
-  }
-  
-  .sidebar__elements:hover {
-    background-color: var(--colorPrimaryActive);
-  }
-
-  .sidebar__listing {
-    padding-top: 3vh;
-  }
-  
+  background-color: darkgrey !important;
+}
