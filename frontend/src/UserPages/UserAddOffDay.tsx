@@ -9,20 +9,42 @@ import SelectExcuseLeave from './UserToolComponents/ExcuseLeaveSelect';
 import DatePickerFinishValue from './UserToolComponents/FinishDatePicker';
 import IconLabelButtons from './UserToolComponents/RequestOffDayButton';
 import StickyFooter from '../StickyFooter';
-import StaticDatePickerLandscape from './UserToolComponents/Datepicker';
+import DatePickerValue from './UserToolComponents/Datepicker';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 
 
 
 function UserAddOffDay() {
   return (
-    <div className="select__container" >
+    <div >
       <NavigationBarUser />
-      <SelectExcuseLeave />
-      <StaticDatePickerLandscape />
-      <DatePickerFinishValue />
-      <IconLabelButtons />
+      <Box
+          sx={{
+            marginTop: 10,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+<SelectExcuseLeave />
+
+<Grid container spacing={-110}>
+              <Grid item xs={1} sm={6}>
+              <DatePickerValue />
+              </Grid>
+              <Grid item xs={1} sm={6}>
+              <DatePickerFinishValue />
+              </Grid>
+      
+      
+      </Grid>
+      
+      <IconLabelButtons  />
+        </Box>
+        
       <StickyFooter />
-     
+      
     </div>
   );
 }

@@ -8,10 +8,10 @@ import "./RequestOffdayButton.css"
 
 function IconLabelButtons() {
   return (
-    <div className="button-container"  style={{height:30}}>
+    <div className="button-container"  style={{height:40 , marginTop:65}}>
       <Stack direction="row" spacing={2}>
         <Button className='button' variant="contained" endIcon={<SendIcon />}>
-          Request
+          İstek Oluştur
         </Button>
       </Stack>
     </div>

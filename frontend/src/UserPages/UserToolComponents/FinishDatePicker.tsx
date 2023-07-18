@@ -5,6 +5,8 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import "./FinishDatePicker.css";
+import { light } from '@mui/material/styles/createPalette';
+import { lightGreen } from '@mui/material/colors';
 
 function DatePickerFinishValue() {
   const [value, setValue] = React.useState<Dayjs | null>(dayjs('2022-04-17'));
@@ -14,7 +16,7 @@ function DatePickerFinishValue() {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DemoContainer components={['DatePicker']}>
           <div className="datepicker-wrapper">
-            <label className="datepicker-label">Select a Finish Date</label>
+            <label className="datepicker-label" style={{color: 'gray', fontWeight: 'normal'}} >Bitiş Tarihi Seçiniz</label>
             <DatePicker
               className="datepicker-input"
               label=""
