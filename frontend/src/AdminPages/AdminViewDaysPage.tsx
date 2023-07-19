@@ -33,7 +33,7 @@ function AdminViewDaysPage() {
           <CalendarForLeave />
         </div>
 
-        <StickyFooter />
+        
       </div>
 
     </div>
