@@ -12,13 +12,14 @@ import StickyFooter from '../StickyFooter';
 import DatePickerValue from './UserToolComponents/Datepicker';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import UserSideBar from './UserSideBar/UserSideBar';
 
 
 
 function UserAddOffDay() {
   return (
-    <div >
-      <NavigationBarUser />
+    <div className='page__holder'>
+      <UserSideBar />
       <Box
           sx={{
             marginTop: 10,
