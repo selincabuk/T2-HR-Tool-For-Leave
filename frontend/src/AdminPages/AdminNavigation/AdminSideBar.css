@@ -9,7 +9,8 @@
 
 .sidebar {
   background-color: var(--colorPrimary);
-  height: 100vh;
+  height: 100%;
+  transition: width 0.2s !important;
 }
 
 .sidebar__items {
@@ -18,7 +19,7 @@
 }
 
 .sidebar__items:hover {
-  background-color: black
+  background-color: rgb(236, 229, 237)
 }
 
 .sidebar__list {
@@ -31,7 +32,7 @@
 }
 
 .sidebar a:hover {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 2.1vh;
 }
 
@@ -66,7 +67,7 @@
 }
 
 .sidebar__arrow {
-  background-color: darkgrey !important;
+  background-color: rgb(208, 203, 209) !important;
 }
 
 
