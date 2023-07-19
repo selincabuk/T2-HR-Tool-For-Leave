@@ -8,17 +8,13 @@ import Avatar from '@mui/material/Avatar';
 
 import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import StickyNote2Icon from '@mui/icons-material/StickyNote2';
 import BadgeIcon from '@mui/icons-material/Badge';
 import RecentActorsOutlinedIcon from '@mui/icons-material/RecentActorsOutlined';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
-
 import Tooltip from '@mui/material/Tooltip';
-
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
-
 
 interface MenuItem {
     title: string,
@@ -87,7 +83,7 @@ function AdminSideBar() {
     }
 
     return (
-        <Paper elevation={4} className="sidebar" style={ isOpen ? { width: "15vw" } : { width: "70px" }}>
+        <Paper elevation={4} className="sidebar" style={isOpen ? { width: "15vw" } : { width: "70px" }}>
             <List className="sidebar__first__list">
                 <Avatar className="sidebar__arrow"
                     style={isOpen ? { marginLeft: "14vw" } : { marginLeft: "54px" }}
@@ -97,9 +93,21 @@ function AdminSideBar() {
                 </Avatar>
             </List>
             <List className="sidebar__second__list">
-                {sidebarItems.map((item: MenuItem) => 
-                        isOpen ?
-                            (<a href={item.link}>
+                {sidebarItems.map((item: MenuItem) =>
+                    isOpen ?
+                        (<a href={item.link}>
+                            <ListItem className="sidebar__items">
+                                <ListItemAvatar>
+                                    <Avatar className="sidebar__avatar">
+                                        <item.icon />
+                                    </Avatar>
+                                </ListItemAvatar>
+                                {isOpen && <ListItemText primary={item.title} />}
+                            </ListItem>
+                            <Divider variant="inset" component="li" className="sidebar__divider" />
+                        </a>)
+                        : (<Tooltip title={item.title} placement="right">
+                            <a href={item.link}>
                                 <ListItem className="sidebar__items">
                                     <ListItemAvatar>
                                         <Avatar className="sidebar__avatar">
@@ -108,21 +116,9 @@ function AdminSideBar() {
                                     </ListItemAvatar>
                                     {isOpen && <ListItemText primary={item.title} />}
                                 </ListItem>
-                                <Divider variant="inset" component="li" className="sidebar__divider" />
-                            </a>)
-                            : (<Tooltip title={item.title} placement="right">
-                                <a href={item.link}>
-                                    <ListItem className="sidebar__items">
-                                        <ListItemAvatar>
-                                            <Avatar className="sidebar__avatar">
-                                                <item.icon />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        {isOpen && <ListItemText primary={item.title} />}
-                                    </ListItem>
-                                    <Divider variant="inset" component="li" className="sidebar__divider__closed" />
-                                </a>
-                            </Tooltip>)
+                                <Divider variant="inset" component="li" className="sidebar__divider__closed" />
+                            </a>
+                        </Tooltip>)
                 )}
             </List>
             <List className="sidebar__third__list">
