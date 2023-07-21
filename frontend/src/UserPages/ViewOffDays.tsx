@@ -22,15 +22,15 @@ function ViewOffDays() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: '#9f5cbe' }}>
+          <Avatar sx={{ m: 1, bgcolor: '#9f5cbe', ml: 22  }}>
             <CalendarMonthOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5" sx={{ mb: -3 }} >
+          <Typography component="h1" variant="h5" sx={{ mb: -3 , ml: 20 }} >
             İzin Takvimi
           </Typography>
         </Box>
 
-        <div className="calendar__holder">
+        <div className="calendar__holder" style={{ marginLeft: "250px" }}>
           <CalendarForLeave />
         </div>
 

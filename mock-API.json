@@ -17,7 +17,7 @@
       "responses": [
         {
           "uuid": "61da4402-3d07-4efe-948a-2bdc64350f6b",
-          "body": "[\n  {\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"birthDate\": \"01/05/2002\",\n    \"gender\": \"Female\",\n    \"status\": \"visible\"\n  },\n  {\n    \"id\": 2,\n    \"fname\": \"Selin\",\n    \"lname\": \"Çabuk\",\n    \"email\": \"sln@gmail.com\",\n    \"birthDate\": \"12/05/2002\",\n    \"gender\": \"Female\",\n    \"status\": \"visible\"\n  }\n  \n  ]",
+          "body": "[\n  {\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"birthDate\": \"01/05/2002\",\n    \"gender\": \"Kadın\",\n    \"status\": \"visible\"\n  },\n  {\n    \"id\": 2,\n    \"fname\": \"Selin\",\n    \"lname\": \"Çabuk\",\n    \"email\": \"sln@gmail.com\",\n    \"birthDate\": \"12/05/2002\",\n    \"gender\": \"Kadın\",\n    \"status\": \"visible\"\n  }\n  \n  ]",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -67,7 +67,7 @@
       "responses": [
         {
           "uuid": "5a4ac128-9ed0-4875-ad3a-a9344edba58f",
-          "body": "[\n  {\n    \"id\": 1,\n    \"startDate\": \"12-03-2021\",\n    \"endDate\": \"17-03-2021\",\n    \"status\": \"Approved\"\n  },\n  {\n    \"id\": 2,\n    \"startDate\": \"12-04-2022\",\n    \"endDate\": \"17-05-2022\",\n    \"status\": \"Rejected\"\n  },\n  {\n    \"id\": 3,\n    \"startDate\": \"09-03-2023\",\n    \"endDate\": \"12-03-2023\",\n    \"status\": \"Rejected\"\n  },\n  {\n    \"id\": 4,\n    \"startDate\": \"04-08-2023\",\n    \"endDate\": \"12-3-2023\",\n    \"status\": \"Pending\"\n  }\n]",
+          "body": "[\n  {\n    \"id\": 1,\n    \"startDate\": \"12-03-2021\",\n    \"endDate\": \"17-03-2021\",\n    \"status\": \"Onaylandı\"\n  },\n  {\n    \"id\": 2,\n    \"startDate\": \"12-04-2022\",\n    \"endDate\": \"17-05-2022\",\n    \"status\": \"Onaylandı\"\n  },\n  {\n    \"id\": 3,\n    \"startDate\": \"09-03-2023\",\n    \"endDate\": \"12-03-2023\",\n    \"status\": \"Reddedildi\"\n  },\n  {\n    \"id\": 4,\n    \"startDate\": \"04-08-2023\",\n    \"endDate\": \"12-3-2023\",\n    \"status\": \"Beklemede\"\n  }\n]",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -95,7 +95,7 @@
       "responses": [
         {
           "uuid": "82ceb244-e399-45c0-9b7c-669cfeebc849",
-          "body": "{\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"birthday\": \"01/05/2002\",\n    \"gender\": \"Female\",\n    \"pwd\": \"pass\",\n    \"totDays\": 70,\n    \"daysLeft\": 14\n}",
+          "body": "{\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"birthday\": \"01/05/2002\",\n    \"gender\": \"Kadın\",\n    \"pwd\": \"pass\",\n    \"totDays\": 70,\n    \"daysLeft\": 14\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -123,7 +123,7 @@
       "responses": [
         {
           "uuid": "281d89c9-8676-4f0c-877b-5e81bfaa2495",
-          "body": "[\n  {\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"startDate\": \"15/08/2023\",\n    \"endDate\": \"23/08/2023\",\n    \"reason\": \"canım tatil yapmak istiyor\",\n    \"status\": \"pending\"\n  },\n  {\n    \"id\": 2,\n    \"fname\": \"Selin\",\n    \"lname\": \"Çabuk\",\n    \"email\": \"sln@gmail.com\",\n    \"startDate\": \"30/08/2023\",\n    \"endDate\": \"04/09/2023\",\n    \"reason\": \"Bi Çeşme'ye gidip geliyim\",\n    \"status\": \"rejected\"\n  }\n]",
+          "body": "[\n  {\n    \"id\": 1,\n    \"fname\": \"Ceren\",\n    \"lname\": \"Akyar\",\n    \"email\": \"crn@gmail.com\",\n    \"startDate\": \"15/08/2023\",\n    \"endDate\": \"23/08/2023\",\n    \"reason\": \"canım tatil yapmak istiyor\",\n    \"status\": \"pending\"\n  },\n  {\n    \"id\": 2,\n    \"fname\": \"Selin\",\n    \"lname\": \"Çabuk\",\n    \"email\": \"sln@gmail.com\",\n    \"startDate\": \"30/08/2023\",\n    \"endDate\": \"04/09/2023\",\n    \"reason\": \"Bi Çeşme'ye gidip geliyim\",\n    \"status\": \"approved\"\n  }\n]",
           "latency": 0,
           "statusCode": 200,
           "label": "",

@@ -40,10 +40,12 @@ function StickyFooter() {
   sx={{
     py: 0,
     px: 5,
-    backgroundColor: (theme) =>
+    mr: 200,
+    ml: -53.5,
+    backgroundColor: 'white', /* (theme) =>
       theme.palette.mode === 'light'
         ? theme.palette.grey[100]
-        : theme.palette.grey[800],
+        : theme.palette.grey[800], */
     position: 'fixed', 
     bottom: 0, 
     width: '100%', 
@@ -52,8 +54,8 @@ function StickyFooter() {
 >
 
 <Container maxWidth="sm">
-    <Box sx={{ textAlign: 'center' }}>
-      <Typography variant="body1">info@t2.com.tr</Typography>
+    <Box sx={{ textAlign: 'center', mr: 28}}>
+      <Typography variant="body1"></Typography>
       <Copyright />
     </Box>
   </Container>

@@ -34,7 +34,7 @@ function ListUsersTable( { users }: UserProps ) {
                             <TableCell align="center">Email</TableCell>
                             <TableCell align="center">Doğum Tarihi</TableCell>
                             <TableCell align="center">Cinsiyet</TableCell>
-                            <TableCell align="center">Düzenle/Görünmez Yap</TableCell>
+                            <TableCell align="center">Aksiyonlar</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

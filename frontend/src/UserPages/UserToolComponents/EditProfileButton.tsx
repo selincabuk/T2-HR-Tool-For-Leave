@@ -9,8 +9,8 @@ function EditProfileButton() {
   }
   return (
     <div className='actionBtn' onClick={editBtnHandler} style={{display: "flex"}}>
-      <EditIcon className='actionBtn'/>
-      <p style={{marginLeft: "10px", fontSize: "16px", fontWeight: "500"}}>Edit Profile</p>
+      <EditIcon className='actionBtn' style={{marginLeft: "-52px"}} />
+      <p style={{marginLeft: "5px", fontSize: "16px", fontWeight: "500"}}>Profili Düzenle</p>
     </div>
     
   );

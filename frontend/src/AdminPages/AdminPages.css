@@ -3,11 +3,12 @@
     width: 80%;
     margin-top: 2%;
     max-height: 80vh;
-    overflow: auto;
+    overflow :auto;
+    
 }
 
 .calendar__holder {
-    margin: auto;
+    
     justify-content: center;
     margin-top: 4vh;
 }
@@ -15,4 +16,8 @@
 .page__holder {
     display: flex;
     height: 100vh;
+}
+
+.ant-picker-panel {
+    margin-left: '200';
 }

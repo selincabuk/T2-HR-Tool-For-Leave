@@ -41,7 +41,7 @@ function RequestsTable(props: RequestsTableProps) {
                             <TableCell align="center">Email</TableCell>
                             <TableCell align="center">İzin Başlangıç Tarihi</TableCell>
                             <TableCell align="center">İzin Bitiş Tarihi</TableCell>
-                            <TableCell align="center">Detay/Onay/Red</TableCell>
+                            <TableCell align="center">Aksiyonlar</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

@@ -25,9 +25,9 @@ function ViewProfile() {
     ];
 
     return (
-        <div className="page__holder">
+        <div className="page__holder"  >
             <UserSideBar />
-            <div className="tab__div">
+            <div className="tab__div" style={{ paddingLeft: "200px" }} >
                 <Tabs className="profile__card__label"
                     size="large"
                     onChange={onChange}
@@ -35,9 +35,10 @@ function ViewProfile() {
                     items={items}
                 />
             </div>
-            <StickyFooter />
+          
         </div>
     );
 }
 
 export default ViewProfile;
+

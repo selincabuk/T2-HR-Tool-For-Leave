@@ -68,8 +68,11 @@
     margin: auto;
     justify-content: center;
     
-   
- }
+  }
+  .ant-tabs .ant-tabs-top .ant-tabs-large .ant-tabs-card.profile__card__label.css-dev-only-do-not-override-1m62vyb {
+    padding-left: 100 !important;
+    margin-left: 50;
+  }
 
 
  

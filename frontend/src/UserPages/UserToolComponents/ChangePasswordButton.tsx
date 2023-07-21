@@ -8,7 +8,7 @@ function ChangePasswordButton() {
 
     return (
         <div className="pwd__button__div">
-            <button className="btn btn-primary pwd__button" onChange={pwdChangeHandler}>Change Password</button>
+            <button className="btn btn-primary pwd__button" style={{backgroundColor: 'purple'}}  onChange={pwdChangeHandler}>Change Password</button>
         </div>
     )
 }

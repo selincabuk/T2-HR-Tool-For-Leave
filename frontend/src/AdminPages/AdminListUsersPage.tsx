@@ -117,6 +117,7 @@ function AdminListUsersPage() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            ml: 13,
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: '#9f5cbe' }}>

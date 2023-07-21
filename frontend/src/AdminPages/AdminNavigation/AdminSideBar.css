@@ -68,6 +68,11 @@
 
 .sidebar__arrow {
   background-color: rgb(208, 203, 209) !important;
+  cursor: pointer;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation4.sidebar.css-11mde6h-MuiPaper-root{
+  position: fixed;
 }
 
 

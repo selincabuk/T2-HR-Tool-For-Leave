@@ -67,6 +67,7 @@ export default function SignUp() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: '#9f5cbe' }}>
@@ -75,7 +76,12 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Kullanıcı Kaydı
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box
+            component="form"
+            noValidate
+            onSubmit={handleSubmit}
+            sx={{ mt: 3, paddingLeft: "0px" }} 
+          >
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -125,11 +131,11 @@ export default function SignUp() {
                     aria-label="gender"
                     name="gender"
                     row
-                    sx={{ justifyContent: 'center', pl: 9 }}
+                    sx={{ justifyContent: 'center', pl: 14 }}
                   >
                     <FormControlLabel value="female" control={<Radio />} label="Kadın" />
                     <FormControlLabel value="male" control={<Radio />} label="Erkek" />
-                    <FormControlLabel value="other" control={<Radio />} label="Diğer" />
+                   
                   </RadioGroup>
                 </FormControl>
               </Grid>
@@ -161,9 +167,10 @@ export default function SignUp() {
             </Grid> */}
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
+       {/* <Copyright sx={{ mt: 5 }} /> */}
+       
       </Container>
-      <StickyFooter />
+      
     </ThemeProvider>
   );
 }

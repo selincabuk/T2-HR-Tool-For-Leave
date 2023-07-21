@@ -20,7 +20,7 @@ import Typography from '@mui/material/Typography';
 function UserAddOffDay() {
   return (
     <div className='page__holder'>
-      <UserSideBar />
+      <UserSideBar  />
       <Box
           sx={{
             marginTop: 10,
@@ -28,12 +28,15 @@ function UserAddOffDay() {
             flexDirection: 'column',
             alignItems: 'center',
             margin :'auto',
+            paddingLeft: '70px',
+            
+           
           }}
         >
  <Avatar sx={{ m: 1, bgcolor: '#9f5cbe' }}>
             <StickyNote2Icon />
           </Avatar>
-          <Typography component="h1" variant="h5" sx={{ mb: 1 }} >
+          <Typography component="h1" variant="h5" sx={{ mb: 3 }} >
             İzin İsteği
           </Typography>      
 <SelectExcuseLeave  />
