@@ -142,22 +142,43 @@ import StickyFooter from './StickyFooter';
 const defaultTheme = createTheme();
 
 export default function SignIn() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
+
+    try {
+      const response = await fetch('https://reqres.in/api/users', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+      if (!response.ok) {
+        throw new Error(`Error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      console.log('result is: ', JSON.stringify(result, null, 4));
+    } catch (e) {
+      console.log('Error', e);
+    }
+
+    console.log(data);
+
   };
 
   const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#1392c2', 
+    palette: {
+      primary: {
+        main: '#1392c2',
+      },
     },
-  },
-});
+  });
 
   return (
     <ThemeProvider theme={theme}>
@@ -169,7 +190,7 @@ export default function SignIn() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            
+
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: '#9f5cbe' }}>
@@ -188,8 +209,6 @@ export default function SignIn() {
               name="email"
               autoComplete="email"
               autoFocus
-             
-             
             />
             <TextField
               margin="normal"
@@ -210,8 +229,6 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              
-
             >
               Oturum Aç
             </Button>
@@ -229,10 +246,10 @@ export default function SignIn() {
             </Grid>
           </Box>
         </Box>
-        
+
         {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
       </Container>
-      
+
     </ThemeProvider>
   );
 }

@@ -1,5 +1,6 @@
 package com.t2software.demo.service;
 
+import com.t2software.demo.model.UsersModel;
 import com.t2software.demo.repository.UsersRepository;
 import org.springframework.stereotype.Service;
 
