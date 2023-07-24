@@ -154,7 +154,7 @@ export default function SignIn() {
   const theme = createTheme({
   palette: {
     primary: {
-      main: '#1392c2', // İstediğiniz bir renk değeri
+      main: '#1392c2', 
     },
   },
 });
@@ -165,10 +165,11 @@ export default function SignIn() {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 16,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: '#9f5cbe' }}>
@@ -231,7 +232,7 @@ export default function SignIn() {
         
         {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
       </Container>
-      <StickyFooter/>
+      
     </ThemeProvider>
   );
 }

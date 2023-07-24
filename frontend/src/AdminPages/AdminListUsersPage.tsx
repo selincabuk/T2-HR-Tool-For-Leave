@@ -131,7 +131,7 @@ function AdminListUsersPage() {
 
           <ListUsersTable users={filteredUsers}  />
           {error && !isLoading &&
-            <Alert severity="error">Bir şeyler ters gitti. Lütfen sonra tekrar deneyin.</Alert>
+            <Alert severity="error" sx={{ mt: 3 }}>Bir şeyler ters gitti. Lütfen sonra tekrar deneyin.</Alert>
           }
           {!isLoading && !error && filteredUsers && filteredUsers.length <= 0 &&
             <Alert severity="info" sx={{ mt: 3 }}>Gösterilecek kullanıcı bulunmamaktadır. </Alert>
