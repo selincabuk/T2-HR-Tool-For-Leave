@@ -1,6 +1,6 @@
 package com.t2software.demo.service;
 
-import com.t2software.demo.model.UsersModel;
+import com.t2software.demo.model.User;
 import com.t2software.demo.repository.UsersRepository;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +12,10 @@ public class UsersService {
     public UsersService(UsersRepository usersRepository) {
         this.usersRepository = usersRepository;
     }
-    public UsersModel registerUser(String login, String password, String email) {
+    public User registerUser(String login, String password, String email) {
         if ( login != null && password != null ) {
-            UsersModel usersModel = new UsersModel();
-            usersModel.setLogin(login);
-            usersModel.setPassword(password);
+            User usersModel = new User();
+
             usersModel.setEmail(email);
             return usersRepository.save(usersModel);
         } else {
@@ -25,7 +24,7 @@ public class UsersService {
         }
     }
 
-    public UsersModel authenticate(String login, String password) {
+    public User authenticate(String login, String password) {
         return usersRepository.findByLoginAndPassword(login, password).orElse(null);
     }
 }
