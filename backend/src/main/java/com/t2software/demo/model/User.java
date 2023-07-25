@@ -76,13 +76,6 @@ package com.t2software.demo.model;
 import jakarta.persistence.*;
 
 
-import jakarta.persistence.*;
-
-import javax.annotation.processing.Generated;
-import java.util.Objects;
-
-
-
 import java.util.Date;
 import java.util.UUID;
 
