@@ -84,6 +84,7 @@ import java.util.Objects;
 
 
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Table(name = "users")
@@ -91,7 +92,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID id;
 
     @Column(name = "email", nullable = false, unique = true)
     private String email;
@@ -122,11 +123,12 @@ public class User {
 
     //  getter ve setter eklenecek
 
-    public Long getId() {
+
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
