@@ -75,6 +75,13 @@ public class UsersModel {
 package com.t2software.demo.model;
 import jakarta.persistence.*;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Date;
 import java.util.UUID;
@@ -104,8 +111,9 @@ public class User {
     @Column(name = "gender", length = 10)
     private Gender gender;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "role", length = 20)
-    private String role;
+    private UserRole role;
 
     @Column(name = "activity", length = 50)
     private String activity;
@@ -113,6 +121,12 @@ public class User {
     @Temporal(TemporalType.DATE)
     @Column(name = "start_date")
     private Date startDate;
+
+    private Boolean locked;
+    private Boolean enabled;
+
+    
+
 
     //  getter ve setter eklenecek
 
@@ -165,11 +179,11 @@ public class User {
         this.gender = gender;
     }
 
-    public String getRole() {
+    public UserRole getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(UserRole role) {
         this.role = role;
     }
 

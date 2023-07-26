@@ -20,6 +20,7 @@ public class UsersService {
             return usersRepository.save(usersModel);
         } else {
             System.out.println("hata var asko");
+            System.out.println("hatayı coz ");
             return null;
         }
     }
