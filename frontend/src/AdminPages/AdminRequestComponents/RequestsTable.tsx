@@ -5,7 +5,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { useState, useEffect } from 'react';
 import './RequestsTable.css';
 import ApproveButton from './ApproveButton';
 import DescriptionButton from './DescriptionButton';
@@ -61,7 +60,9 @@ function RequestsTable(props: RequestsTableProps) {
                                 <TableCell align="center">{row.endDate}</TableCell>
                                 <TableCell align="center">
                                     <div className='request__button__holder'>
-                                        <DescriptionButton startDate={row.startDate} endDate={row.endDate} reason={row.reason}/><ApproveButton /><DeleteRequestButton />
+                                        <DescriptionButton startDate={row.startDate} endDate={row.endDate} reason={row.reason} status={row.status}/>
+                                        {row.status === "pending" && <ApproveButton />}
+                                        {row.status === "pending" && <DeleteRequestButton />}
                                     </div>
 
                                 </TableCell>

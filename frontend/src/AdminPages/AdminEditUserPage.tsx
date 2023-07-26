@@ -1,7 +1,7 @@
 import EditUserForm from "./AdminEditUserComponents/EditUserForm";
 import { Routes, Route, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import AdminSideBar from "./AdminNavigation/AdminSideBar";
+import SideBar from "./AdminNavigation/SideBar";
 
 interface User {
     id: number,
@@ -46,7 +46,7 @@ function AdminEditUserPage() {
 
     return (
         <div>
-            <AdminSideBar />
+            <SideBar />
             
         </div>
     )

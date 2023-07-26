@@ -1,9 +1,3 @@
-import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import NavigationBarUser from "./UserToolComponents/NavigationBarUser";
 import "./UserPages.css";
 import SelectExcuseLeave from './UserToolComponents/ExcuseLeaveSelect';
 import DatePickerFinishValue from './UserToolComponents/FinishDatePicker';
@@ -11,16 +5,16 @@ import IconLabelButtons from './UserToolComponents/RequestOffDayButton';
 import DatePickerValue from './UserToolComponents/Datepicker';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import UserSideBar from './UserSideBar/UserSideBar';
 import StickyNote2Icon from '@mui/icons-material/StickyNote2';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import SideBar from '../AdminPages/AdminNavigation/SideBar';
 
 
 function UserAddOffDay() {
   return (
     <div className='page__holder'>
-      <UserSideBar  />
+      <SideBar  />
       <Box
           sx={{
             marginTop: 10,

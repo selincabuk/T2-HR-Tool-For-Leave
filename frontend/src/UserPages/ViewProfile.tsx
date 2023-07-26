@@ -1,10 +1,8 @@
-import NavigationBarUser from "./UserToolComponents/NavigationBarUser";
 import "./UserPages.css";
 import ProfileInfo from "./UserToolComponents/ProfileInfo";
 import { Tabs } from 'antd';
 import PreviousRequestsTable from "./UserToolComponents/PreviousRequestsTable";
-import StickyFooter from "../StickyFooter";
-import UserSideBar from "./UserSideBar/UserSideBar";
+import SideBar from "../AdminPages/AdminNavigation/SideBar";
 
 function ViewProfile() {
     const onChange = (key: string) => {
@@ -26,7 +24,7 @@ function ViewProfile() {
 
     return (
         <div className="page__holder"  >
-            <UserSideBar />
+            <SideBar />
             <div className="tab__div" style={{ paddingLeft: "200px" }} >
                 <Tabs className="profile__card__label"
                     size="large"

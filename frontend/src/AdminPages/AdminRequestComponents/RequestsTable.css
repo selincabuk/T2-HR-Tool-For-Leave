@@ -9,6 +9,8 @@
 
 .request__button {
     cursor: pointer;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .request__button__holder {

@@ -1,4 +1,4 @@
-import "./AdminSideBar.css";
+import "./SideBar.css";
 import { useState, useEffect } from "react";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -20,6 +20,7 @@ interface MenuItem {
     title: string,
     link: string,
     icon: any,
+    role: string
 }
 
 type AdminSideBarMenu = MenuItem[];
@@ -30,25 +31,41 @@ const sidebarItems: AdminSideBarMenu =
             title: "İstekler",
             link: "/admin",
             icon: StickyNote2Icon,
+            role: "admin"
         },
         {
             title: "Kullanıcılar",
             link: "/admin/users",
             icon: RecentActorsOutlinedIcon,
+            role: "admin"
         },
         {
             title: "Yeni Kullanıcı",
             link: "/admin/register-user",
             icon: BadgeIcon,
+            role: "admin"
         },
         {
             title: "İzin Takvimi",
-            link: "/admin/view-off",
+            link: "/user/view-off",
             icon: CalendarMonthOutlinedIcon,
+            role: "user"
+        },
+        {
+            title: "Yeni İzin Formu",
+            link: "/user/add-off-days",
+            icon: StickyNote2Icon,
+            role: "user"
+        },
+        {
+            title: "Profil",
+            link: "/user/view-profile",
+            icon: RecentActorsOutlinedIcon,
+            role: "user"
         },
     ]
 
-function AdminSideBar() {
+function SideBar() {
     // to check if the bar is open or closed (default is open:)
     const [isOpen, setIsOpen] = useState<boolean>(true);
 
@@ -82,6 +99,10 @@ function AdminSideBar() {
             setIsOpen(true)
     }
 
+    // TODO:
+    // here you will learn user's role and then you will show the sidebar items according to the role
+    const userRole: string = "admin";
+
     return (
         <Paper elevation={4} className="sidebar" style={isOpen ? { width: "15vw" } : { width: "70px" }}>
             <List className="sidebar__first__list">
@@ -94,20 +115,9 @@ function AdminSideBar() {
             </List>
             <List className="sidebar__second__list">
                 {sidebarItems.map((item: MenuItem) =>
-                    isOpen ?
-                        (<a href={item.link}>
-                            <ListItem className="sidebar__items">
-                                <ListItemAvatar>
-                                    <Avatar className="sidebar__avatar">
-                                        <item.icon />
-                                    </Avatar>
-                                </ListItemAvatar>
-                                {isOpen && <ListItemText primary={item.title} />}
-                            </ListItem>
-                            <Divider variant="inset" component="li" className="sidebar__divider" />
-                        </a>)
-                        : (<Tooltip title={item.title} placement="right">
-                            <a href={item.link}>
+                    item.role === "admin" ? (userRole === "admin" &&
+                        (isOpen ?
+                            (<a href={item.link}>
                                 <ListItem className="sidebar__items">
                                     <ListItemAvatar>
                                         <Avatar className="sidebar__avatar">
@@ -116,10 +126,50 @@ function AdminSideBar() {
                                     </ListItemAvatar>
                                     {isOpen && <ListItemText primary={item.title} />}
                                 </ListItem>
-                                <Divider variant="inset" component="li" className="sidebar__divider__closed" />
-                            </a>
-                        </Tooltip>)
-                )}
+                                <Divider variant="inset" component="li" className="sidebar__divider" />
+                            </a>)
+                            : (<Tooltip title={item.title} placement="right">
+                                <a href={item.link}>
+                                    <ListItem className="sidebar__items">
+                                        <ListItemAvatar>
+                                            <Avatar className="sidebar__avatar">
+                                                <item.icon />
+                                            </Avatar>
+                                        </ListItemAvatar>
+                                        {isOpen && <ListItemText primary={item.title} />}
+                                    </ListItem>
+                                    <Divider variant="inset" component="li" className="sidebar__divider__closed" />
+                                </a>
+                            </Tooltip>)
+                        ))
+                        :
+                        (isOpen ?
+                            (<a href={item.link}>
+                                <ListItem className="sidebar__items">
+                                    <ListItemAvatar>
+                                        <Avatar className="sidebar__avatar">
+                                            <item.icon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    {isOpen && <ListItemText primary={item.title} />}
+                                </ListItem>
+                                <Divider variant="inset" component="li" className="sidebar__divider" />
+                            </a>)
+                            : (<Tooltip title={item.title} placement="right">
+                                <a href={item.link}>
+                                    <ListItem className="sidebar__items">
+                                        <ListItemAvatar>
+                                            <Avatar className="sidebar__avatar">
+                                                <item.icon />
+                                            </Avatar>
+                                        </ListItemAvatar>
+                                        {isOpen && <ListItemText primary={item.title} />}
+                                    </ListItem>
+                                    <Divider variant="inset" component="li" className="sidebar__divider__closed" />
+                                </a>
+                            </Tooltip>)
+                        ))
+                }
             </List>
             <List className="sidebar__third__list">
                 <Divider variant="middle" />
@@ -138,4 +188,4 @@ function AdminSideBar() {
     )
 }
 
-export default AdminSideBar;
+export default SideBar;

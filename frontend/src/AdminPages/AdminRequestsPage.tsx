@@ -1,9 +1,7 @@
 import FilterComponent from "./AdminRequestComponents/FilterComponent";
 import RequestsTable from "./AdminRequestComponents/RequestsTable";
-import NavigationBar from "./AdminToolComponents/NavigationBar";
 import { useEffect, useState } from "react";
 import Alert from '@mui/material/Alert';
-import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import StickyNote2Icon from '@mui/icons-material/StickyNote2';
 import Box from '@mui/material/Box';
@@ -12,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import StickyFooter from "../StickyFooter";
-import AdminSideBar from "./AdminNavigation/AdminSideBar";
+import SideBar from "./AdminNavigation/SideBar";
 
 
 
@@ -108,7 +106,7 @@ function AdminRequestsPage() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="page__holder">
-        <AdminSideBar />
+        <SideBar />
         <Container component="main"  >
           <Box
             sx={{

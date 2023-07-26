@@ -3,15 +3,14 @@ import Avatar from '@mui/material/Avatar';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import StickyFooter from "../StickyFooter";
-import AdminSideBar from "./AdminNavigation/AdminSideBar";
 import "./AdminPages.css";
+import SideBar from "./AdminNavigation/SideBar";
 
 
 function AdminViewDaysPage() {
   return (
     <div className="page__holder">
-      <AdminSideBar />
+      <SideBar />
       <div>
         <Box
           sx={{

@@ -1,9 +1,9 @@
-import NavigationBarUser from "./UserToolComponents/NavigationBarUser";
+import SideBar from "../AdminPages/AdminNavigation/SideBar";
 
 function EditProfile() {
     return (
         <div>
-            <NavigationBarUser />
+            <SideBar />
             <h1>Edit Profile</h1>
         </div>
     )

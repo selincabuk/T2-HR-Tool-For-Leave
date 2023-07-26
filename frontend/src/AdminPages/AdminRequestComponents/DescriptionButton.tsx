@@ -8,6 +8,7 @@ interface DescriptionButtonProps {
     startDate: string,
     endDate: string,
     reason: string
+    status: string
 }
 
 
@@ -38,10 +39,12 @@ function DescriptionButton(props: DescriptionButtonProps) {
                 <Modal.Header closeButton>
                     <Modal.Title>Detaylar</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Başlangıç tarihi: {props.startDate} <br></br>
-                    Bitiş tarihi: {props.endDate} <br></br>
-                    Toplam gün sayısı: {props.endDate} - {props.startDate} <br></br>
-                    Açıklama: {props.reason === "" ? "Belirtilmemiş" : props.reason}</Modal.Body>
+                <Modal.Body>
+                    <strong>Durum:</strong> {props.status }<br></br>
+                    <strong>Başlangıç tarihi:</strong> {props.startDate} <br></br>
+                    <strong>Bitiş tarihi:</strong> {props.endDate} <br></br>
+                    <strong>Toplam gün sayısı:</strong> {props.endDate} - {props.startDate} <br></br>
+                    <strong>Açıklama:</strong> {props.reason === "" ? "Belirtilmemiş" : props.reason}</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Kapat

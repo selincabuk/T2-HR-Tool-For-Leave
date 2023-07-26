@@ -1,11 +1,11 @@
-import AdminSideBar from "./AdminNavigation/AdminSideBar";
 import RegisterationForm from "./AdminToolComponents/RegisterationForm";
 import "./AdminPages.css"
+import SideBar from "./AdminNavigation/SideBar";
 
 function AdminRegisterUserPage() {
     return (
       <div className="page__holder">
-          <AdminSideBar />
+          <SideBar />
           <RegisterationForm />
       </div>
     );

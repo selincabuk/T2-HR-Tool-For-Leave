@@ -1,4 +1,3 @@
-import NavigationBar from "./AdminToolComponents/NavigationBar";
 import "./AdminPages.css";
 import ListUsersTable from "./AdminToolComponents/ListUsersTable";
 import Avatar from '@mui/material/Avatar';
@@ -13,7 +12,7 @@ import Alert from '@mui/material/Alert';
 import FilterUsers from "./AdminToolComponents/FilterUsers";
 import { useState, useEffect } from 'react';
 import StickyFooter from "../StickyFooter";
-import AdminSideBar from "./AdminNavigation/AdminSideBar";
+import SideBar from "./AdminNavigation/SideBar";
 
 function Copyright(props: any) {
   return (
@@ -108,7 +107,7 @@ function AdminListUsersPage() {
   return (
     <ThemeProvider theme={theme}>
       <div className="page__holder">
-      <AdminSideBar />
+      <SideBar />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
