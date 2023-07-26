@@ -88,6 +88,10 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.UUID;
 
+@Getter
+@Setter
+@EqualsAndHashCode
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User implements UserDetails {
@@ -130,6 +134,18 @@ public class User implements UserDetails {
     private Boolean locked;
     private Boolean enabled;
 
+    public User(UUID id, String email, String password, String firstname, String lastname, Date birthday, Gender gender, UserRole role, String activity, Date startDate) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.role = role;
+        this.activity = activity;
+        this.startDate = startDate;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
