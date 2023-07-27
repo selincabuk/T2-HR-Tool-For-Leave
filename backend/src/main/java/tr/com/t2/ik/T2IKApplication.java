@@ -44,7 +44,17 @@ public class T2IKApplication {
             tan.setPassword(new BCryptPasswordEncoder().encode("tan"));
             tan.setRoles(new HashSet<>(Collections.singletonList(user)));
 
-            personnelRepository.saveAll(Arrays.asList(mete,tan));
+            Personnel selin = new Personnel();
+            selin.setUsername("selin");
+            selin.setPassword(new BCryptPasswordEncoder().encode("sel"));
+            selin.setRoles(new HashSet<>(Collections.singletonList(user)));
+
+            Personnel ceren = new Personnel();
+            ceren.setUsername("ceren");
+            ceren.setPassword(new BCryptPasswordEncoder().encode("cero"));
+            ceren.setRoles(new HashSet<>(Collections.singletonList(user)));
+
+            personnelRepository.saveAll(Arrays.asList(mete,tan,selin,ceren));
         };
     }
 }

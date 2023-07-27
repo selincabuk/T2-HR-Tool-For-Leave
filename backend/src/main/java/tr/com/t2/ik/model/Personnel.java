@@ -12,6 +12,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.Date;
 
 @Data
 @Entity
@@ -31,5 +32,23 @@ public class Personnel {
             inverseJoinColumns = @JoinColumn(name = "name")
     )
     private Set<Role> roles = new HashSet<>();
+
+    @Column(name = "firstname")
+    private String firstname;
+
+    @Column(name = "lastname")
+    private String lastname;
+
+    @Column(name = "birthday")
+    private Date birthday;
+
+    @Column(name = "activity", length = 50)
+    private String activity;
+
+    @Column(name = "start_date")
+    private Date startDate;
+
+
+
 
 }
