@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3289cdf-7b59-4d50-b67b-8751f61e2194" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/t2software/demo/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/t2software/demo/controller/UsersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/t2software/demo/dto/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/t2software/demo/model/Gender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/t2software/demo/model/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/t2software/demo/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/t2software/demo/model/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/t2software/demo/repository/UsersRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/t2software/demo/service/UsersService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/AdminPages/AdminNavigation/SideBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/AdminPages/AdminNavigation/SideBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/AdminPages/AdminPages.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/AdminPages/AdminPages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/AdminPages/AdminRequestsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/AdminPages/AdminRequestsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/AdminPages/AdminToolComponents/CalendarForLeave.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/AdminPages/AdminToolComponents/CalendarForLeave.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/AdminPages/AdminToolComponents/EditActionButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/AdminPages/AdminToolComponents/EditActionButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/AdminPages/AdminToolComponents/MakeVisibleButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/AdminPages/AdminToolComponents/MakeVisibleButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/UserPages/UserPages.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/UserPages/UserPages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/UserPages/UserToolComponents/NavigationBarUser.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/UserPages/UserToolComponents/NavigationBarUser.tsx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2T9dTMPMLyuw9LV1a8lTLyccRe6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3289cdf-7b59-4d50-b67b-8751f61e2194" name="Changes" comment="" />
+      <created>1690459239806</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690459239806</updated>
+      <workItem from="1690459240948" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

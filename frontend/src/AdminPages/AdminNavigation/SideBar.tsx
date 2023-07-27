@@ -101,7 +101,7 @@ function SideBar() {
 
     // TODO:
     // here you will learn user's role and then you will show the sidebar items according to the role
-    const userRole: string = "admin";
+    const userRole: string = "user";
 
     return (
         <Paper elevation={4} className="sidebar" style={isOpen ? { width: "15vw" } : { width: "70px" }}>

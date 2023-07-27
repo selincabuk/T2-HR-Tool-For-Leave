@@ -3,6 +3,8 @@ import "./Components.css";
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import Tooltip from '@mui/material/Tooltip';
+
 function MakeVisibleButton() {
 
     // state to show modal:
@@ -26,11 +28,11 @@ function MakeVisibleButton() {
     };
 
     return (
-        <div>
-            <VisibilityOffIcon className="request__button" onClick={makeVisibleHandler}
-                onMouseEnter={() => handleMouseEnter()}
-                onMouseLeave={() => handleMouseLeave()}
-            >Make Visible</VisibilityOffIcon>
+        <>
+            <Tooltip title="Pasif hale getir" placement='bottom'>
+                <VisibilityOffIcon className="request__button" onClick={makeVisibleHandler}
+                >Make Visible</VisibilityOffIcon>
+            </Tooltip>
             <Modal
                 show={show}
                 onHide={handleClose}
@@ -47,8 +49,7 @@ function MakeVisibleButton() {
                     <Button variant="primary" onClick={makeVisibleHandler}>Evet</Button>
                 </Modal.Footer>
             </Modal>
-            {isHovered === true ? <div className='list__button__hover__p'>Görünmez Yap</div> : ""}
-        </div>
+        </>
     )
 }
 

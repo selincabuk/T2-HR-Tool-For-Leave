@@ -1,11 +1,11 @@
 services:
   db:
-    container_name: postgres
+    container_name: t2software
     image: postgres
     environment:
       POSTGRES_USER: t2software
       POSTGRES_PASSWORD: pass123
-      PGDATA: /data/postgres
+      PGDATA: /data/postgres2
     volumes:
       - db:/data/postgres
     ports:

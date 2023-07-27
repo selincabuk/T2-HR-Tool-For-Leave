@@ -158,9 +158,9 @@
 
 
 .calendar__holder {
-  width: 80%;
   margin: auto;
   margin-top: 4vh;
+  height: 500px !important;
 }
 
 .page__holder {

@@ -15,5 +15,3 @@ spring:
     show_sql: true
   main:
     web-application-type: servlet
-
-
