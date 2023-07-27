@@ -124,6 +124,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import StickyFooter from './StickyFooter';
 import { useNavigate } from "react-router-dom";
+import {useState} from 'react';
 
 
 /* function Copyright(props: any) {
@@ -139,7 +140,6 @@ import { useNavigate } from "react-router-dom";
   );
 } */
 
-// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function SignIn() {
@@ -164,9 +164,9 @@ export default function SignIn() {
       });
 
       if (response.status === 401) {
-        throw new Error('Authentication failed: Invalid credentials');
+        console.log('Authentication failed: Invalid credentials');
       } else if (!response.ok) {
-        throw new Error(`Error! status: ${response.status}`);
+        console.log(`Error! status: ${response.status}`);
       }
       else {
           navigate('/admin/users');

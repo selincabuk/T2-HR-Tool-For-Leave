@@ -34,5 +34,4 @@ public class LoginController {
         final String token = jwtTokenUtil.generateToken(authentication);
         return ResponseEntity.ok(token);
     }
-
 }
