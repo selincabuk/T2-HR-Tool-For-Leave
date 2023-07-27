@@ -1,5 +1,6 @@
 package com.t2software.demo.service;
 
+
 import com.t2software.demo.model.User;
 import com.t2software.demo.repository.UsersRepository;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class UsersService {
         if ( login != null && password != null ) {
             User usersModel = new User();
 
-            usersModel.setEmail(email);
+            usersModel.setUsername(email);
             return usersRepository.save(usersModel);
         } else {
             System.out.println("hata var asko");

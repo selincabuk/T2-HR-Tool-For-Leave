@@ -1,5 +1,6 @@
 package com.t2software.demo.repository;
 
+
 import com.t2software.demo.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 

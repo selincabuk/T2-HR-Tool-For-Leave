@@ -73,6 +73,7 @@ public class UsersModel {
     }
 }*/
 package com.t2software.demo.model;
+import com.t2software.demo.repository.UsersRepository;
 import jakarta.persistence.*;
 
 import lombok.EqualsAndHashCode;
@@ -101,7 +102,7 @@ public class User implements UserDetails {
     private UUID id;
 
     @Column(name = "email", nullable = false, unique = true)
-    private String email;
+    private String username;
 
     @Column(name = "password", nullable = false)
     private String password;
@@ -134,9 +135,9 @@ public class User implements UserDetails {
     private Boolean locked;
     private Boolean enabled;
 
-    public User(UUID id, String email, String password, String firstname, String lastname, Date birthday, Gender gender, UserRole role, String activity, Date startDate) {
+    public User(UUID id, String username, String password, String firstname, String lastname, Date birthday, Gender gender, UserRole role, String activity, Date startDate) {
         this.id = id;
-        this.email = email;
+        this.username = username;
         this.password = password;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -166,11 +167,11 @@ public class User implements UserDetails {
     }
 
     public String getUsername() {
-        return email;
+        return username;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
@@ -256,4 +257,6 @@ public class User implements UserDetails {
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
+
+
 }
